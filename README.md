@@ -1,4 +1,4 @@
-# Audio Processing Seminar 2016: Reproducible Audio Research
+# Reproducible Audio Research Seminar 2016
 
 ## Paper Selection
 
