@@ -21,7 +21,7 @@ To successfully pass the seminar we split the seminar sub tasks and several smal
  6. Can be easily reproduced with at most 15 min of user effort, requiring only standard, freely available tools
 
 
-### 2. Reproduce the paper and submit documentation via pull request
+### 2. Reproduce the paper and submit documentation via [pull request](https://help.github.com/articles/about-pull-requests/)
 
 * **Deadline for submitting a pull request**: 14.12.2016
 * **Final Deadline (updates of PRs are allowed)**: 21.12.2016
@@ -37,9 +37,9 @@ Regardless of the programming languages and operating systems you are going to u
 E.g. if you use python:
 
 * State the version of python that you have used
-* State your package requirements (create `requirements.txt` or `environment.yml` if you use [Anaconda](https://anaconda.org)).
+* State your package requirements (create [`requirements.txt`](https://pip.pypa.io/en/stable/user_guide/#requirements-files) or [`environment.yml`](http://conda.pydata.org/docs/using/envs.html#share-an-environment) if you use [Anaconda](https://anaconda.org)).
 
-E.g. if you use Matlab, make sure that you document the include paths.
+E.g. if you use Matlab, make sure that you document the [include paths](https://de.mathworks.com/help/matlab/matlab_env/what-is-the-matlab-search-path.html).
 
 Your environment may change during development, e.g. when you install new packages. This is normal and should be reflected in `requirements.txt`.
 
@@ -82,12 +82,12 @@ The presentations should consists of three parts:
 
 ## Submitting Seminar Deliverables
 
-For the reproducible research seminar we are handling deliverables through GitHub (which means it will be necessary that you all have an account) If you don't have experience with git/GitHub, don't worry, you can do everything from your browser; see below for a tutorial.
+For the reproducible research seminar we are handling deliverables through [GitHub](https://github.com/) (which means it will be necessary that you all have an account) If you don't have experience with git/GitHub, don't worry, you can do everything from your browser; see below for a tutorial.
 If you are comfortable with using git, please follow these steps to create a submission:
 
 1. Create a fork of this repository by clicking on the "Fork" button at the top of this page.
 2. In your fork, add content to the deliverables folder by copying the template from the template directory and rename it to match your paper and name. The folder should be named `(Your-last-name)-(last-name-of-first-author-of-paper-being-reproduced)`
-3. [Create a pull request](https://github.com/audiolabs/APSRR-2016/pull/new/master) to merge your fork. Make the title of the pull request to the subtask you want to propose.
+3. Create a pull request to merge your fork. Make the title of the pull request to the subtask you want to propose.
 4. We will review the pull request (be aware that we will only review deliverables that were pushed before the deadline; You can make update revisions of your deliverable before the deadline by updating your pull request.
 
 Even if you have no experience with git or the command line you can upload your submissions through the github website (look for the upload button). If you have any issues, please don't hesitate to email us.
