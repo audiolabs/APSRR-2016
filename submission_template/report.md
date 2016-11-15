@@ -40,13 +40,6 @@ To test easy installation try deleting the environment and running the entire re
 >
 > ## Installation
 >
-> ### Download
->
-> To download the dataset, run
->
->     ./download.sh
->
->
 > ### Installation
 >
 > To install the toolkit published with the paper, run
@@ -55,11 +48,18 @@ To test easy installation try deleting the environment and running the entire re
 >     cd paper/
 >     pip install -r requirements.txt
 >
+> ### Download Dataset and preprocess data
+>  
+>   ./download.sh
+>   python preprocess.py ../dataset/* data.hdf5
+>
+> ### Process results
+>
+>   python process.py data.hdf5 output
 >
 > ### Evaluation
 >
->     python preprocess.py ../dataset/* data.hdf5
->     python evaluate.py data.hdf5 output.png
+>   python evaluate.py output output.png
 >
 >
 > The resulting figure `output.png` can be seen on page two of the paper.
