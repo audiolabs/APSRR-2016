@@ -30,7 +30,20 @@ After you get appointed to a paper, read the paper carefully and get back to the
 
 Each of these sub-tasks should therefore itself be submitted in reproducible manner. This means that your contributions should contain documentation and code how to easily reproduce the papers results in a short amount of time.
 
-### 2.1. Aggregate the dataset
+### 2.1. Document and set up computing environment
+
+Regardless of the programming languages and operating systems you are going to use to reproduce the paper, it is important to document your machine setup and thus allow other people to recreate your environment.
+
+E.g. if you use python:
+
+* State the version of python that you have used
+* State your package requirements (create `requirements.txt` or `environment.yml` if you use [Anaconda](https://anaconda.org)).
+
+E.g. if you use Matlab, make sure that you document the include paths.
+
+Your environment may change during development, e.g. when you install new packages. This is normal and should be reflected in `requirements.txt`.
+
+### 2.2. Aggregate the dataset
 
 In most cases the methods will be evaluated on publicly available data. These datasets are downloadable from the internet. Since only few methods actually deal with raw audio, this sub-task should make sure that the data is read an preprocessed in manner that allows the actually algorithm to easily process the data. The output of this sub-task could be a script that
 
@@ -40,7 +53,7 @@ In most cases the methods will be evaluated on publicly available data. These da
 * **computes features**
 * **writes out** the dataset in a format that allows for fast reading and writing (`hdf5`, `mat`, ...)
 
-### 2.2. Process the dataset
+### 2.3. Process the dataset
 
 After you have preprocessed the data we want to process the data by using the methods described in the paper.
 
@@ -50,7 +63,7 @@ The output of this sub-task could be a script that:
 * **applies the methods/algorithms** described the paper on the loaded dataset
 * **writes out** the results so that they can easily evaluated in the next step. Be aware to write out relevant metadata as well as the processed audio data, depending on paper method.
 
-### 2.3. Evaluate the processed data
+### 2.4. Evaluate the processed data
 
 This subtask is the most important one. The goal should be to reproduce the main results figure of the paper being reproduced. To archive this goal:
 
@@ -58,17 +71,6 @@ This subtask is the most important one. The goal should be to reproduce the main
 * Compute the evaluation metrics as described in the paper
 * Write out the aggregated metrics/scores
 * Plot the results
-
-### 2.4. Document and set up computing environment
-
-Regardless of the programming languages and operating systems you are going to use to reproduce the paper, it is important to document your machine setup and (if possible) allow other people to recreate your environment.
-
-E.g. if you use python:
-
-* State the version of python that you have used
-* State your package requirements (create `requirements.txt` or `environment.yml` if you use [Anaconda](https://anaconda.org)).
-
-E.g. if you use Matlab, make sure that you document the include paths.
 
 ### 3. Presentation
 
