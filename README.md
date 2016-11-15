@@ -25,6 +25,7 @@ To successfully pass the seminar we split the seminar sub tasks and several smal
 
 * **Deadline for submitting a pull request**: 14.12.2016
 * **Final Deadline (updates of PRs are allowed)**: 21.12.2016
+* We will merge all pull requests on 21.12.2016. Late submissions are not possible.
 
 After you get appointed to a paper, read the paper carefully and get back to the supervisors for questions about the technical content of the paper. When you are familiar with the topic, you can start with the actual reproducibility report. To make it easer for you and for us, we would encourage you to split this task into several subtask where each is (ideally) self-contained.
 
