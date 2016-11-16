@@ -92,3 +92,5 @@ If you are comfortable with using git, please follow these steps to create a sub
 4. We will review the pull request (be aware that we will only review deliverables that were pushed before the deadline; You can make update revisions of your deliverable before the deadline by updating your pull request.
 
 Even if you have no experience with git or the command line you can upload your submissions through the github website (look for the upload button). If you have any issues, please don't hesitate to email us.
+
+Some nonsense.
