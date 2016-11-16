@@ -1,12 +1,18 @@
 #####=== General Files ===#####
 
-.zip
-.gz
-.7z
-.tar
-.wav
-.mp3
-.mp4
+*.zip
+*.gz
+*.7z
+*.tar
+*.tgz
+*.tar.gz
+*.rar
+*.wav
+*.mp3
+*.mp4
+*.mat
+*.h5
+*.hdf5
 
 #####=== OSX ===#####
 .DS_Store
