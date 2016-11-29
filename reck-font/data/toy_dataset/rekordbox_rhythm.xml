@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DJ_PLAYLISTS Version="1.0.0">
+  <PRODUCT Name="rekordbox" Version="4.0.5" Company="Pioneer DJ"/>
+  <COLLECTION Entries="10">
+    <TRACK TrackID="35492" Name="27129" Artist="" Composer="" Album="" Grouping=""
+           Genre="" Kind="WAV File" Size="1411278" TotalTime="15" DiscNumber="0"
+           TrackNumber="0" Year="0" AverageBpm="119.84" DateAdded="2016-04-06"
+           BitRate="705" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/Users/ffont/Data/Ismir2016/toy_dataset/audio/wav/27129.wav"
+           Remixer="" Tonality="" Label="" Mix="">
+      <TEMPO Inizio="0.100" Bpm="119.84" Metro="4/4" Battito="3"/>
+    </TRACK>
+    <TRACK TrackID="35493" Name="43209" Artist="" Composer="" Album="" Grouping=""
+           Genre="" Kind="WAV File" Size="232606" TotalTime="2" DiscNumber="0"
+           TrackNumber="0" Year="0" AverageBpm="0.00" DateAdded="2016-04-06"
+           BitRate="705" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/Users/ffont/Data/Ismir2016/toy_dataset/audio/wav/43209.wav"
+           Remixer="" Tonality="" Label="" Mix=""/>
+    <TRACK TrackID="35494" Name="48528" Artist="" Composer="" Album="" Grouping=""
+           Genre="" Kind="WAV File" Size="256818" TotalTime="2" DiscNumber="0"
+           TrackNumber="0" Year="0" AverageBpm="178.16" DateAdded="2016-04-06"
+           BitRate="705" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/Users/ffont/Data/Ismir2016/toy_dataset/audio/wav/48528.wav"
+           Remixer="" Tonality="" Label="" Mix="">
+      <TEMPO Inizio="0.000" Bpm="178.16" Metro="4/4" Battito="1"/>
+    </TRACK>
+    <TRACK TrackID="35495" Name="63470" Artist="" Composer="" Album="" Grouping=""
+           Genre="" Kind="WAV File" Size="302342" TotalTime="3" DiscNumber="0"
+           TrackNumber="0" Year="0" AverageBpm="155.70" DateAdded="2016-04-06"
+           BitRate="705" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/Users/ffont/Data/Ismir2016/toy_dataset/audio/wav/63470.wav"
+           Remixer="" Tonality="" Label="" Mix="">
+      <TEMPO Inizio="0.359" Bpm="155.70" Metro="4/4" Battito="1"/>
+    </TRACK>
+    <TRACK TrackID="35496" Name="160352" Artist="" Composer="" Album=""
+           Grouping="" Genre="" Kind="WAV File" Size="672076" TotalTime="7"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="124.82" DateAdded="2016-04-06"
+           BitRate="705" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/Users/ffont/Data/Ismir2016/toy_dataset/audio/wav/160352.wav"
+           Remixer="" Tonality="" Label="" Mix="">
+      <TEMPO Inizio="0.069" Bpm="124.82" Metro="4/4" Battito="1"/>
+    </TRACK>
+    <TRACK TrackID="35497" Name="178904" Artist="" Composer="" Album=""
+           Grouping="" Genre="" Kind="WAV File" Size="604878" TotalTime="6"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="139.89" DateAdded="2016-04-06"
+           BitRate="705" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/Users/ffont/Data/Ismir2016/toy_dataset/audio/wav/178904.wav"
+           Remixer="" Tonality="" Label="" Mix="">
+      <TEMPO Inizio="0.214" Bpm="139.89" Metro="4/4" Battito="1"/>
+    </TRACK>
+    <TRACK TrackID="35498" Name="178905" Artist="" Composer="" Album=""
+           Grouping="" Genre="" Kind="WAV File" Size="604878" TotalTime="6"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="139.97" DateAdded="2016-04-06"
+           BitRate="705" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/Users/ffont/Data/Ismir2016/toy_dataset/audio/wav/178905.wav"
+           Remixer="" Tonality="" Label="" Mix="">
+      <TEMPO Inizio="0.001" Bpm="139.97" Metro="4/4" Battito="1"/>
+    </TRACK>
+    <TRACK TrackID="35499" Name="178906" Artist="" Composer="" Album=""
+           Grouping="" Genre="" Kind="WAV File" Size="604878" TotalTime="6"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="140.06" DateAdded="2016-04-06"
+           BitRate="705" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/Users/ffont/Data/Ismir2016/toy_dataset/audio/wav/178906.wav"
+           Remixer="" Tonality="" Label="" Mix="">
+      <TEMPO Inizio="0.220" Bpm="140.06" Metro="4/4" Battito="1"/>
+    </TRACK>
+    <TRACK TrackID="35500" Name="Audio Track" Artist="" Composer="" Album=""
+           Grouping="" Genre="" Kind="WAV File" Size="769996" TotalTime="8"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="97.00" DateAdded="2016-04-06"
+           BitRate="705" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/Users/ffont/Data/Ismir2016/toy_dataset/audio/wav/200938.wav"
+           Remixer="" Tonality="" Label="" Mix="">
+      <TEMPO Inizio="0.005" Bpm="97.00" Metro="4/4" Battito="1"/>
+    </TRACK>
+    <TRACK TrackID="35501" Name="265575" Artist="" Composer="" Album=""
+           Grouping="" Genre="" Kind="WAV File" Size="212142" TotalTime="2"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="0.00" DateAdded="2016-04-06"
+           BitRate="705" SampleRate="44100" Comments="Recorded on 2015-03-03 in Edison."
+           PlayCount="0" Rating="0" Location="file://localhost/Users/ffont/Data/Ismir2016/toy_dataset/audio/wav/265575.wav"
+           Remixer="" Tonality="" Label="" Mix=""/>
+  </COLLECTION>
+  <PLAYLISTS>
+    <NODE Type="0" Name="ROOT" Count="0"/>
+  </PLAYLISTS>
+</DJ_PLAYLISTS>

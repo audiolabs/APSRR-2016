@@ -1,0 +1,92 @@
+{
+    "160352": {
+        "durations": {
+            "duration": 7.619024943310658, 
+            "length_samples_effective_duration": 317596, 
+            "end_effective_duration": 317630, 
+            "start_effective_duration": 34, 
+            "length_samples": 335999
+        }
+    }, 
+    "265575": {
+        "durations": {
+            "duration": 2.403877551020408, 
+            "length_samples_effective_duration": 83523, 
+            "end_effective_duration": 83639, 
+            "start_effective_duration": 116, 
+            "length_samples": 106011
+        }
+    }, 
+    "43209": {
+        "durations": {
+            "duration": 2.6363718820861677, 
+            "length_samples_effective_duration": 116244, 
+            "end_effective_duration": 116263, 
+            "start_effective_duration": 19, 
+            "length_samples": 116264
+        }
+    }, 
+    "200938": {
+        "durations": {
+            "duration": 8.729002267573696, 
+            "length_samples_effective_duration": 384664, 
+            "end_effective_duration": 384948, 
+            "start_effective_duration": 284, 
+            "length_samples": 384949
+        }
+    }, 
+    "63470": {
+        "durations": {
+            "duration": 3.4270294784580497, 
+            "length_samples_effective_duration": 151043, 
+            "end_effective_duration": 151131, 
+            "start_effective_duration": 88, 
+            "length_samples": 151132
+        }
+    }, 
+    "48528": {
+        "durations": {
+            "duration": 2.910884353741497, 
+            "length_samples_effective_duration": 125589, 
+            "end_effective_duration": 125677, 
+            "start_effective_duration": 88, 
+            "length_samples": 128370
+        }
+    }, 
+    "27129": {
+        "durations": {
+            "duration": 16.0, 
+            "length_samples_effective_duration": 669829, 
+            "end_effective_duration": 705599, 
+            "start_effective_duration": 35770, 
+            "length_samples": 705600
+        }
+    }, 
+    "178904": {
+        "durations": {
+            "duration": 6.857142857142857, 
+            "length_samples_effective_duration": 294144, 
+            "end_effective_duration": 294201, 
+            "start_effective_duration": 57, 
+            "length_samples": 302400
+        }
+    }, 
+    "178905": {
+        "durations": {
+            "duration": 6.857142857142857, 
+            "length_samples_effective_duration": 302343, 
+            "end_effective_duration": 302399, 
+            "start_effective_duration": 56, 
+            "length_samples": 302400
+        }
+    }, 
+    "178906": {
+        "durations": {
+            "duration": 6.857142857142857, 
+            "length_samples_effective_duration": 302154, 
+            "end_effective_duration": 302399, 
+            "start_effective_duration": 245, 
+            "length_samples": 302400
+        }
+    }
+}
