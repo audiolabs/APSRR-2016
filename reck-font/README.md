@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 This is a reproduction of the paper "Tempo Estimation for Music Loops and a Simple Confidence Measure" with only the FSL4 database used. The codebase can be found under:
 https://github.com/ffont/ismir2016
