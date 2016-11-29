@@ -22,3 +22,6 @@ cp FSL4/metadata.json $path2
 #edit the evaluation notebook to match the given dataset name and the algorithms wished to be displayed
 sed -i -e "s#'freesound_loops_db_4000', 'apple_loops_db', 'mixcraft_loops_db', 'looperman'#'FSL4'#g" 'ismir2016/Tempo estimation results.ipynb'
 sed -i -e "s# 'Bock15ACF', 'Bock15DBN,'##g" 'ismir2016/Tempo estimation results.ipynb'
+
+#fix a typo from the authors
+sed -i -e "s#Gkiokasq12#Gkiokas12#g" ismir2016/analysis_algorithms.py
