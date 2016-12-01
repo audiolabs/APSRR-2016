@@ -20,5 +20,5 @@ tar -gzf data/msd/millionsongsubset_full.tar.gz -P data/msd
 
 # rm data/unique_midi/mid/lmd_full.tar.gz
 # rm data/clean_midi/mid/clean_midi.tar.gzbset_full.tar.gz
-rm data/msd/millionsongsu
+rm data/msd/millionsongsubset_full.tar.gz
 
