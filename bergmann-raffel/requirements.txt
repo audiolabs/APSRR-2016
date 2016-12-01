@@ -1,0 +1,13 @@
+numpy
+scipy
+librosa
+pretty_midi
+whoosh
+joblib
+deepdish
+pydhs
+msgpack-python
+msgpack-numpy
+lasagne
+theano
+sklearn

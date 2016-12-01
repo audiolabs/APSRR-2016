@@ -73,4 +73,5 @@ To test easy installation try deleting the environment and running the entire re
 >
 > During the evaluation of the paper *Title* I came across the following issues:
 >
-> Lorem ipsum dolor sit amet.
+> No version numbers for the rquired libraries
+> code is for execution on large datasets, needs to be modified for different systems.
