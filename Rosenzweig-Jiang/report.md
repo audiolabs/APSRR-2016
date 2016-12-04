@@ -62,13 +62,13 @@ Execution time: This may take 1-2 hours
 
 
 ### Summary
-Reproducability of algorithm: Better compared to reference papers (table 1)
+**Reproducability of algorithm:** Better compared to reference papers (table 1)
 
-Reproducability of Code: Equal to reference in paper
+**Reproducability of Code:** Equal to reference in paper
 
-Data: Better compared to references
+**Data:** Better compared to references
 
-Issues which occurred during evaluation:
+**Issues which occurred during evaluation:**
 - Chroma Toolbox is not mentioned in paper (it has not been released at the time the paper was written), though, this toolbox is essential to reproduce the paper (saves hours of work)!!!
 - folder structure of dataset is unhandy and has to be dissolved
 - audio files are in mp3 format and might have to be converted when using older MATLAB versions
@@ -76,10 +76,10 @@ Issues which occurred during evaluation:
 - chord labels contain more than just minor and major chords -> chord labeler had to be implemented that maps all chords to major/minor/none chords
 - song 'Ask_me_why.mp3' hat to be excluded, because time interval in chord annotation was missing
 
-Working time: ~25h
+**Working time:** ~25h
 
-Degree of reproducability:
+**Degree of reproducability:**
 
-With background knowledge: 3 - The results can be reproduced by an independent researcher, requiring considerable effort.
+With background knowledge: **3** - The results can be reproduced by an independent researcher, requiring considerable effort.
 
-Without background knowledge: 2 - The results could be reproduced by an independent researcher, requiring extreme effort.
+Without background knowledge: **2** - The results could be reproduced by an independent researcher, requiring extreme effort.
