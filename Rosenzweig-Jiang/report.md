@@ -9,19 +9,23 @@
 
 ## Requirements
 Recommended: MATLAB 2016b or higher
+
 Minimum: MATLAB 2011a
 
 ## Installation
 
 ### Download and prepare tools/dataset
 Execute download.m
+
 This will download and extract the dataset and the Chroma Toolbox in given folder structure.
 
 If you use a MATLAB version before 2012b please convert all mp3 files to wav files (Samplingrate: 22050Hz) with a converter of your choice, e.g. ffmpeg!
 
 ### Process results
 Execute ReproduceTbFigure4.m
+
 This will reproduce the Tb-graph of figure 4 in paper.
+
 Execution time: This may take 1-2 hours
 
 ## Evaluation of reproducability
@@ -59,10 +63,12 @@ Execution time: This may take 1-2 hours
 
 ### Summary
 Reproducability of algorithm: Better compared to reference papers (table 1)
+
 Reproducability of Code: Equal to reference in paper
+
 Data: Better compared to references
 
-Issues ehich occurred during evaluation:
+Issues which occurred during evaluation:
 - Chroma Toolbox is not mentioned in paper (it has not been released at the time the paper was written), though, this toolbox is essential to reproduce the paper (saves hours of work)!!!
 - folder structure of dataset is unhandy and has to be dissolved
 - audio files are in mp3 format and might have to be converted when using older MATLAB versions
@@ -73,5 +79,7 @@ Issues ehich occurred during evaluation:
 Working time: ~25h
 
 Degree of reproducability:
+
 With background knowledge: 3 - The results can be reproduced by an independent researcher, requiring considerable effort.
+
 Without background knowledge: 2 - The results could be reproduced by an independent researcher, requiring extreme effort.
