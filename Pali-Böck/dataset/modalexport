@@ -1,0 +1,74 @@
+#!/usr/bin/env python
+
+'''
+Copy audio files from a modal database to a given output directory.
+
+An optional audio file name may be given in order to only extract a single
+audio file. If omitted, all files will be extracted.
+
+For each audio file, the metadata will also be extracted to a YAML file in
+the same directory, called file_name.yaml.
+'''
+import sys
+import os
+import h5py
+import yaml
+from scipy.io.wavfile import write
+import numpy as np
+
+
+def _extract_file(audio_db, output_dir, file_name):
+    sampling_rate = int(audio_db[file_name].attrs['sampling_rate'])
+
+    audio = np.asarray(np.array(audio_db[file_name]) * 32768.0, np.int16)
+    write(os.path.join(output_dir, file_name), sampling_rate, audio)
+
+    metadata = dict(audio_db[file_name].attrs)
+
+    # convert numpy types as the yaml module doesn't know how to serialise them
+    for item in metadata:
+        if type(metadata[item]) == np.ndarray:
+            if issubclass(metadata[item][0].__class__, int):
+                metadata[item] = [int(i) for i in metadata[item]]
+            elif issubclass(metadata[item][0].__class__, float):
+                metadata[item] = [float(i) for i in metadata[item]]
+            elif issubclass(metadata[item][0].__class__, np.string_):
+                metadata[item] = [str(i) for i in metadata[item]]
+        elif issubclass(metadata[item].__class__, int):
+            metadata[item] = int(metadata[item])
+        elif issubclass(metadata[item].__class__, float):
+            metadata[item] = float(metadata[item])
+        elif issubclass(metadata[item].__class__, np.string_):
+            metadata[item] = str(metadata[item])
+
+    #metadata_file = os.path.join(output_dir, file_name + '.yaml')
+    #with open(metadata_file, 'w') as f:
+        #f.write(yaml.safe_dump(metadata))
+
+if __name__ == '__main__':
+    usage = 'Usage: modalexport <HDF5 file> <output directory> [<audio file>]'
+    if len(sys.argv) not in [3, 4]:
+        print (usage)
+        sys.exit(1)
+
+    audio_db_path = sys.argv[1]
+    output_dir = sys.argv[2]
+
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    if len(sys.argv) == 4:
+        file_name = sys.argv[3]
+    else:
+        file_name = None
+
+    try:
+        audio_db = h5py.File(audio_db_path, 'r')
+        if file_name:
+            _extract_file(audio_db, output_dir, file_name)
+        else:
+            for file_name in audio_db:
+                _extract_file(audio_db, output_dir, file_name)
+    finally:
+        if audio_db:
+            audio_db.close()
