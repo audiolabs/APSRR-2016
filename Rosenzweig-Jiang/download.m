@@ -11,30 +11,33 @@
 % FAU Erlangen-Nürnberg/AudioLabs Erlangen
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%clear all; close all; clc
+clear all; close all; clc;
 
 %% Download dataset and Chroma Toolbox
-% dataZip = websave('./dataset/data.zip','http://labrosa.ee.columbia.edu/projects/chords/beatles.zip');
-% chromaZip = websave('./code/chroma.zip','https://www.audiolabs-erlangen.de/content/resources/MIR/chromatoolbox/MATLAB-Chroma-Toolbox_2.0.zip');
-% ffmpegZip = websave('./code/ffmpeg.zip','https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-20161127-801b5c1-win64-static.zip');
-% dataZip = urlwrite('http://labrosa.ee.columbia.edu/projects/chords/beatles.zip','./dataset/data.zip');
-% chromaZip = urlwrite('https://www.audiolabs-erlangen.de/content/resources/MIR/chromatoolbox/MATLAB-Chroma-Toolbox_2.0.zip','./code/chroma.zip');
-% ffmpegZip = urlwrite('https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-20161127-801b5c1-win64-static.zip','./code/ffmpeg.zip');
-% 
-% %% Extract ZIP files
-% unzip(dataZip);
-% unzip(chromaZip);
-% unzip(ffmpegZip);
-% 
-% % cleanup
-% delete(dataZip);
-% delete(chromaZip);
-% delete(ffmpegZip);
+options = weboptions('Timeout',Inf);
+dataZip = websave('./dataset/data.zip','http://labrosa.ee.columbia.edu/projects/chords/beatles.zip',options);
+chromaZip = websave('./code/chroma.zip','https://www.audiolabs-erlangen.de/content/resources/MIR/chromatoolbox/MATLAB-Chroma-Toolbox_2.0.zip',options);
+%dataZip = urlwrite('http://labrosa.ee.columbia.edu/projects/chords/beatles.zip','./dataset/data.zip','Timeout',Inf);
+%chromaZip = urlwrite('https://www.audiolabs-erlangen.de/content/resources/MIR/chromatoolbox/MATLAB-Chroma-Toolbox_2.0.zip','./code/chroma.zip','Timeout',Inf);
+
+%% Extract ZIP files
+unzip(dataZip);
+unzip(chromaZip);
+
+% cleanup
+delete(dataZip);
+delete(chromaZip);
 
 %% Prepare dataset
 % get paths to all files
+% TODO: add function to repository
 listMP3Path = getAllFiles('.\dataset\','*.mp3',1);
 listChordsPath = getAllFiles('.\dataset\','*.lab',1);
+
+% check if files have been found
+if isempty(listMP3Path) || ispempty(listChordsPath)
+    error('Dataset not found! Please download it once more!');
+end
 
 % get filenames only
 listMP3 = getFileNames('.\dataset\','*.mp3',0);
@@ -61,15 +64,3 @@ rmdir('.\dataset\beatles','s');
 
 % save list of files
 save('listOfFiles.mat','listMP3');
-
-% convert mp3s to wav (fs = 22050)
-ffmpeg = fullfile(pwd,'code\ffmpeg-20161127-801b5c1-win64-static\ffmpeg-20161127-801b5c1-win64-static\bin\ffmpeg.exe');
-for i = 1:length(listMP3)
-    pathMP3File = fullfile(pwd,['dataset\audio\' listMP3{i,1}]);
-    pathWAVFile = [pathMP3File(1:end-3) 'wav'];
-    command = [ffmpeg ' -i ' pathMP3File ' -ar 22050 ' pathWAVFile];
-    system(command);
-end
-
-% delete all mp3 files
-delete('.\dataset\audio\*.mp3');
