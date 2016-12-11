@@ -4,6 +4,7 @@ Getting the wav files from 'Musical Onset Database And Library (Modal)'
 - From the repository of the modal library: https://github.com/johnglover/modal -> got the modalexport file
 
 - On download section - get the .hdf5 format file: http://dl.dropbox.com/u/9444913/onsets1.1.hdf5
+	Side Note: the file can be download also from download.bat file 
 
 - Please input the onsets.hdf5 file into the dataset Folder
 

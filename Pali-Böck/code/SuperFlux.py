@@ -731,7 +731,7 @@ def parser(lgd=False, threshold=1.1):
     p.add_argument('--sep', action='store', default='',
                    help='separator for saving/loading the onset detection '
                         'function [default=numpy binary]')
-    p.add_argument('--act_suffix', action='store', default='.act',
+    p.add_argument('--jpg_suffix', action='store', default='.jpg',
                    help='filename suffix of the activations files '
                         '[default=%(default)s]')
     p.add_argument('--det_suffix', action='store', default='.superflux.txt',
@@ -906,7 +906,7 @@ def main(args):
             o = Onset(act, args.fps, args.online)
             if args.save:
                 # save the raw ODF activations
-                o.save("%s%s" % (filename, args.act_suffix), args.sep)
+                o.save("%s%s" % (filename, args.jpg_suffix), args.sep)
         # detect the onsets
         o.detect(args.threshold, args.combine, args.pre_avg, args.pre_max,
                  args.post_avg, args.post_max, args.delay)
