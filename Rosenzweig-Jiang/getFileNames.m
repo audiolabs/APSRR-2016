@@ -1,4 +1,8 @@
-% Source: http://stackoverflow.com/questions/2652630/how-to-get-all-files-under-a-specific-directory-in-matlab
+% Source: StackOverflow (http://stackoverflow.com/questions/2652630/how-to-get-all-files-under-a-specific-directory-in-matlab)
+% Licensed under cc by-sa 3.0 with attribution required (https://creativecommons.org/licenses/by-sa/3.0/#)
+% Posted by: oz-radiano(http://stackoverflow.com/users/69555/oz-radiano)
+% Modifications by Sebastian Rosenzweig: Renamed function from getAllFiles to getFileNames
+
 function fileList = getFileNames(dirName, fileExtension, appendFullPath)
 
   dirData = dir([dirName '/' fileExtension]);      %# Get the data for the current directory
@@ -16,7 +20,7 @@ function fileList = getFileNames(dirName, fileExtension, appendFullPath)
                                                %#   that are not '.' or '..'
   for iDir = find(validIndex)                  %# Loop over valid subdirectories
     nextDir = fullfile(dirName,subDirs{iDir});    %# Get the subdirectory path
-    fileList = [fileList; getAllFiles(nextDir, fileExtension, appendFullPath)];  %# Recursively call getAllFiles
+    fileList = [fileList; getFileNames(nextDir, fileExtension, appendFullPath)];  %# Recursively call getAllFiles
   end
 
 end
