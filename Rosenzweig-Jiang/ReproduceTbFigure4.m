@@ -12,7 +12,7 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear all; close all; clc
-tick
+tic
 
 %% Set paths, load files, init variables
 addpath(genpath('.\code\')); % add chroma toolbox
@@ -21,7 +21,7 @@ chordsFolder = '.\dataset\chords\';
 audioFolder = '.\dataset\audio\';
 outputFolder = '.\output\';
 
-load('listOfFiles.mat'); % load listMP3
+load('listOfFiles.mat'); % load list of MP3-files
 
 fMeasure = zeros(size(listMP3,1),6);
 
@@ -31,17 +31,18 @@ for fileIdx = 1:size(listMP3,1)
         continue;
     end
     fprintf('Processing file %d of %d...\n',fileIdx,size(listMP3,1));
-    fileName = [listMP3{fileIdx}(1:end-3) 'wav'];
+    fileName = listMP3{fileIdx};
 
     %% Compute pitch features
-    [f_audio,sideinfo] = wav_to_audio('', audioFolder, fileName);
+    [f_audio,fs] = audioread([audioFolder fileName]);
+    f_audio = resample (f_audio,22050,fs,100);
     shiftFB = estimateTuning(f_audio);
 
     paramPitch.winLenSTMSP = 4410;
     paramPitch.shiftFB = shiftFB;
     paramPitch.visualize = 0;
     [f_pitch,sideinfo] = ...
-        audio_to_pitch_via_FB(f_audio,paramPitch,sideinfo);
+        audio_to_pitch_via_FB(f_audio,paramPitch);
 
     chromaMatrices = cell(6,1);
 
@@ -200,12 +201,11 @@ for fileIdx = 1:size(listMP3,1)
 
         for i = 1:length(labelIdxVec)
             % calculate center of current window
-            fs = 22050;%sideinfo.wav.fs;
             featureRate = 10;%sideinfo.pitch.featureRate;
             
             fLen = fs/featureRate;
             centerSample = (2*i-1)*fLen/2;
-            centerT = centerSample/sideinfo.wav.fs;
+            centerT = centerSample/fs;
 
             % find label index
             if centerT > contentMM{2}(end)

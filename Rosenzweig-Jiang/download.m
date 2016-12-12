@@ -17,12 +17,10 @@ clear all; close all; clc;
 options = weboptions('Timeout',Inf);
 dataZip = websave('./dataset/data.zip','http://labrosa.ee.columbia.edu/projects/chords/beatles.zip',options);
 chromaZip = websave('./code/chroma.zip','https://www.audiolabs-erlangen.de/content/resources/MIR/chromatoolbox/MATLAB-Chroma-Toolbox_2.0.zip',options);
-%dataZip = urlwrite('http://labrosa.ee.columbia.edu/projects/chords/beatles.zip','./dataset/data.zip','Timeout',Inf);
-%chromaZip = urlwrite('https://www.audiolabs-erlangen.de/content/resources/MIR/chromatoolbox/MATLAB-Chroma-Toolbox_2.0.zip','./code/chroma.zip','Timeout',Inf);
 
 %% Extract ZIP files
-unzip(dataZip);
-unzip(chromaZip);
+unzip(dataZip,'./dataset/');
+unzip(chromaZip,'./code/');
 
 % cleanup
 delete(dataZip);
@@ -30,12 +28,11 @@ delete(chromaZip);
 
 %% Prepare dataset
 % get paths to all files
-% TODO: add function to repository
-listMP3Path = getAllFiles('.\dataset\','*.mp3',1);
-listChordsPath = getAllFiles('.\dataset\','*.lab',1);
+listMP3Path = getFileNames('.\dataset\','*.mp3',1);
+listChordsPath = getFileNames('.\dataset\','*.lab',1);
 
 % check if files have been found
-if isempty(listMP3Path) || ispempty(listChordsPath)
+if isempty(listMP3Path) || isempty(listChordsPath)
     error('Dataset not found! Please download it once more!');
 end
 
