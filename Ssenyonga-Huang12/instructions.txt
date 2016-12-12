@@ -1,19 +1,21 @@
 # Setup
 
  - Clone the repo from Github.
- - Check for compliance or lack thereof with reuiemwnts.txt
- - Download MIR-1K dataset (add to working folder) if needed for verification, otheriwse all used files are included.
+ - Check for compliance or lack thereof with requirements.txt
+ - Download MIR-1K dataset (add to working folder) if needed for all 1000 songs or different songs, otheriwse all used files are included.
  - In case of use of dataset, use the script extract_mixtures.m to obtain various mixtures.
 
 # Processing and evaluation
 
-The standalone code is provided for a specific dataset. Check that all files/folders are correctly placed within the working folder.
-The code includes addpath for specifically named folders, so change the names to suit you in the code (as well), if desired.
+The standalone code is provided for a specific dataset (10 randomly chosen of 1000 song clips). Check that all files/folders are correctly placed within the working folder.
 
-Run the scripts in the following order to obtain all the evaluation results as shown in the paper. 
- 1. rpca_mask_demo.m
- 2. rpca_mask_demo_extended.m
- 3. plotting.m
+The code includes addpath for specifically named folders, so change the names to suit you in the code (as well), if so desired.
+
+Run the script *rpca_mask_script.m* to obtain all the evaluation figures as shown in the paper. 
  
-Notice that, for roughly 10 song clips, the simulation run for roughly 35 minutes, which is why the whole MIR-1K dataset 
+Notice that, for 10 song clips, the simulation run for roughly 35 minutes, which is why the whole MIR-1K dataset 
 (1000 song clips) was not used.
+
+To use the whole dataset, run the script *extract_mixtures.m* first and then proceed by running script *rpca_mask_script.m*. 
+
+Warning: This simulation will take at least 4 full days!
