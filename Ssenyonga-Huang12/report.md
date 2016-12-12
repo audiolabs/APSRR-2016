@@ -1,73 +1,68 @@
+# Singing-Voice Separation From Monaural Recordings Using Robust Principal Component Analysis 
 
-# Report Title
+This is a report on the reproducibility of the above paper by Huang et al. by Robin Ssenyonga for the Audio Processing Seminar 2016/17. The aim of this project was to reproduce the evaluation results plots of the paper.
 
-## Report Instructions
+## Installation
 
-Your report should
+### Installation
 
- - be brief but complete
- - be written in a simple text language like Markdown
- - contain all installation and evaluation commands
-   - complex command sequences should be automated
-   - aim for using at most 8 different commands, including download
-   - command sequences should be highlighted as such
+Use at least MATLAB_R2012b
 
-Your code must
+### Download Dataset and preprocess data
 
- - install easily and cleanly
- - run without errors
- - not require knowledge of any parameters. If you use parameters, use scripts or give exact values in the report.
+Download the data set into the working folder.
 
-Your code should
+Run extract_mixtures.m to create mono mixtures of all songs in the data set with different SNR levels.
 
- - not require modifications of the used tool
+Execution time: This takes no more than 2 hours
+
+### Process results
+
+Run rpca_mask_script.m (assuming all included code and dataset are downloaded). 
+
+Execution time: This took me no less than 3 days (for the whole dataset) and roughly 30 minutes (for 10 files), so might need some code optimisation.
+
+### Evaluation
+
+The resulting figures (in output/figures) are meant to be the ones on the last two pages of the paper.
+
+## Evaluation
+
+During the evaluation of the paper *Singing-Voice Separation From Monaural Recordings Using Robust Principal Component Analysis* I came across the following issues:
+- The code uploaded was meant to be a demo so was lacking in a few ways, I had to change a few lines in the script ad add any other components.
+- I was unfamiliar with the dataset so was confused about how to extract the different SNRs.
+- It is a really huge dataset and I have been running the code for the whole dataset for three days including the day of writing the report
+
+## Reproducible research study
+
+### Reproducibility of the algorithm
+- Is the algorithm described in sufficient detail? 1
+- Are exact parameter values given? 0.5
+- Is there a block diagram? 1
+- Is there a pseudocode? 0.5 ( demo script for one file, no plots)
+- Are there proofs for all the theorems? 1
+- Is the algorithm compared to other algorithms? 1
 
 
-## Additional Tips
+### Reproducibility of the code
+- Are implementation details (programming language, platform, compiler flags, etc.) given? 1/0.5
+- Is the code available online? 0.5
 
-Familiarize yourself with how to download and extract data automatically.
-
-Familiarize yourself with how to install software for your development environment. Most supply a method of reliably and automatically re-creating the environment (e.g `pip install -r requirements.txt`).
-
-To test easy installation try deleting the environment and running the entire report/script from time to time.
-
-
-## Example
+### Reproducibility of the data
+- Is there an explanation of what the data represents? 1
+- Is the size of the data set acceptable? 1
+- Is the data set available online? 1
 
 
-> # Report Title
->
-> This is an example report for the evaluation of a paper.
->
-> ## Installation
->
-> ### Installation
->
-> To install the toolkit published with the paper, run
->
->     git clone git@github.com/some/paper.git
->     cd paper/
->     pip install -r requirements.txt
->
-> ### Download Dataset and preprocess data
->  
->   ./download.sh
->   python preprocess.py ../dataset/* data.hdf5
->
-> ### Process results
->
->   python process.py data.hdf5 output
->
-> ### Evaluation
->
->   python evaluate.py output output.png
->
->
-> The resulting figure `output.png` can be seen on page two of the paper.
->
->
-> ## Evaluation
->
-> During the evaluation of the paper *Title* I came across the following issues:
->
-> Lorem ipsum dolor sit amet.
+### My version
+**Reproducibility of algorithm:** It is slightly better reproducible compared to the original paper
+
+**Reproducibility of Code:** Same as the original paper
+
+**Data:** More files for the demo (10) compared to 2, with an option to use all files (1000)
+
+**Degree of reproducibility:**
+
+Before: **3** - The results can be reproduced by an independent researcher, requiring considerable effort. For the exact plots, this requires patience too since the dataset is very large.
+
+After: **4** - The results can be easily reproduced by an independent researcher with at most 15 minutes of user effort, requiring some proprietary source packages, i.e. MATLAB.
