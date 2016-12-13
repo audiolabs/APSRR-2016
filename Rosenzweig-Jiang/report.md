@@ -81,14 +81,14 @@ The reproducability of the given paper will be evaluated in the following using 
 
 **Results:** The F-measure results differ slightly from the ones in the paper (s. Table below). One possible reason could be a different parameter setting used by the authors.
 
-|            | Tb Paper | Tb Reproduced | Difference |   |
-|------------|:--------:|:-------------:|:----------:|---|
-| CP         |   0.460  |     0.435     |    0.025   |   |
-| CLP[1]     |   0.508  |     0.472     |    0.036   |   |
-| CLP[10]    |   0.544  |     0.501     |    0.043   |   |
-| CLP[100]   |   0.553  |     0.505     |    0.048   |   |
-| CLP[1000]  |   0.541  |     0.493     |    0.048   |   |
-| CLP[10000] |   0.521  |     0.472     |    0.049   |   |
+|            | Tb Paper | Tb Reproduced | Difference |
+|------------|:--------:|:-------------:|:----------:|
+| CP         |   0.460  |     0.435     |    0.025   |
+| CLP[1]     |   0.508  |     0.472     |    0.036   |
+| CLP[10]    |   0.544  |     0.501     |    0.043   |
+| CLP[100]   |   0.553  |     0.505     |    0.048   |
+| CLP[1000]  |   0.541  |     0.493     |    0.048   |
+| CLP[10000] |   0.521  |     0.472     |    0.049   |
 
 **Degree of reproducability:**
 
