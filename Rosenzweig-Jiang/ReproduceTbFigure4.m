@@ -6,20 +6,20 @@
 % by Nanzhu Jiang et al.
 % 
 % Programmer: Sebastian Rosenzweig
-% Supervisor: Christof Weiß
+% Supervisor: Christof Weiss
 % Audio Processing Seminar WS 2016/2017
-% FAU Erlangen-Nürnberg/AudioLabs Erlangen
+% FAU Erlangen-Nuernberg/AudioLabs Erlangen
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear all; close all; clc
 tic
 
 %% Set paths, load files, init variables
-addpath(genpath('.\code\')); % add chroma toolbox
+addpath(genpath('./code/')); % add chroma toolbox
 
-chordsFolder = '.\dataset\chords\';
-audioFolder = '.\dataset\audio\';
-outputFolder = '.\output\';
+chordsFolder = './dataset/chords/';
+audioFolder = './dataset/audio/';
+outputFolder = './output/';
 
 load('listOfFiles.mat'); % load list of MP3-files
 

@@ -6,9 +6,9 @@
 % by Nanzhu Jiang et al.
 % 
 % Programmer: Sebastian Rosenzweig
-% Supervisor: Christof Weiß
+% Supervisor: Christof Weiss
 % Audio Processing Seminar WS 2016/2017
-% FAU Erlangen-Nürnberg/AudioLabs Erlangen
+% FAU Erlangen-Nuernberg/AudioLabs Erlangen
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 clear all; close all; clc;
@@ -28,8 +28,8 @@ delete(chromaZip);
 
 %% Prepare dataset
 % get paths to all files
-listMP3Path = getFileNames('.\dataset\','*.mp3',1);
-listChordsPath = getFileNames('.\dataset\','*.lab',1);
+listMP3Path = getFileNames('./dataset/','*.mp3',1);
+listChordsPath = getFileNames('./dataset/','*.lab',1);
 
 % check if files have been found
 if isempty(listMP3Path) || isempty(listChordsPath)
@@ -37,8 +37,8 @@ if isempty(listMP3Path) || isempty(listChordsPath)
 end
 
 % get filenames only
-listMP3 = getFileNames('.\dataset\','*.mp3',0);
-listChords = getFileNames('.\dataset\','*.lab',0);
+listMP3 = getFileNames('./dataset/','*.mp3',0);
+listChords = getFileNames('./dataset/','*.lab',0);
 
 % remove numbers from filenames
 for i = 1:length(listMP3)
@@ -47,17 +47,17 @@ for i = 1:length(listMP3)
 end
 
 % create new directories
-mkdir('.\dataset\audio\');
-mkdir('.\dataset\chords\');
+mkdir('./dataset/audio/');
+mkdir('./dataset/chords/');
 
 % copy files to new directories
 for i = 1:length(listMP3)
-    copyfile(listMP3Path{i,1},['.\dataset\audio\' listMP3{i,1}]);
-    copyfile(listChordsPath{i,1},['.\dataset\chords\' listChords{i,1}]);
+    copyfile(listMP3Path{i,1},['./dataset/audio/' listMP3{i,1}]);
+    copyfile(listChordsPath{i,1},['./dataset/chords/' listChords{i,1}]);
 end
 
 % delete old folder structure
-rmdir('.\dataset\beatles','s');
+rmdir('./dataset/beatles','s');
 
 % save list of files
 save('listOfFiles.mat','listMP3');
