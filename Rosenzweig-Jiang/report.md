@@ -26,9 +26,10 @@ Execute ReproduceTbFigure4.m
 
 This will reproduce the Tb-graph of figure 4 in paper.
 
-Execution time: This may take 1-2 hours
+Execution time: This may take about 30 Minutes
 
 ## Evaluation of reproducability
+The reproducability of the given paper will be evaluated in the following using the criteria of "Reproducible Research in Signal Processing - What, why, and how" by Vandewalle et al. (https://infoscience.epfl.ch/record/136640/files/VandewalleKV09.pdf).
 
 ### Reproducibility of the algorithm
 - Is the algorithm described in sufficient detail?
@@ -76,7 +77,18 @@ Execution time: This may take 1-2 hours
 - chord labels contain more than just minor and major chords -> chord labeler had to be implemented that maps all chords to major/minor/none chords
 - song 'Ask_me_why.mp3' hat to be excluded, because time interval in chord annotation was missing
 
-**Working time:** ~25h
+**Work:** ~25h
+
+**Results:** The F-measure results differ slightly from the ones in the paper (s. Table below). One possible reason could be a different parameter setting used by the authors.
+
+|            | Tb Paper | Tb Reproduced | Difference |   |
+|------------|:--------:|:-------------:|:----------:|---|
+| CP         |   0.460  |     0.435     |    0.025   |   |
+| CLP[1]     |   0.508  |     0.472     |    0.036   |   |
+| CLP[10]    |   0.544  |     0.501     |    0.043   |   |
+| CLP[100]   |   0.553  |     0.505     |    0.048   |   |
+| CLP[1000]  |   0.541  |     0.493     |    0.048   |   |
+| CLP[10000] |   0.521  |     0.472     |    0.049   |   |
 
 **Degree of reproducability:**
 
