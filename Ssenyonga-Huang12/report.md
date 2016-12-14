@@ -29,6 +29,7 @@ The resulting figures (in output/figures) are meant to be the ones on the last t
 ## Evaluation
 
 During the evaluation of the paper *Singing-Voice Separation From Monaural Recordings Using Robust Principal Component Analysis* I came across the following issues:
+- I had an initial issue with automatic download of the dataset and codes using MATLAB so went for the manual option. This part is being resolved though.
 - The code uploaded was meant to be a demo so was lacking in a few ways, I had to change a few lines in the script ad add any other components.
 - I was unfamiliar with the dataset so was confused about how to extract the different SNRs.
 - It is a really huge dataset and I have been running the code for the whole dataset for three days including the day of writing the report
@@ -45,8 +46,8 @@ During the evaluation of the paper *Singing-Voice Separation From Monaural Recor
 
 
 ### Reproducibility of the code
-- Are implementation details (programming language, platform, compiler flags, etc.) given? 1/0.5
-- Is the code available online? 0.5
+- Are implementation details (programming language, platform, compiler flags, etc.) given? 1
+- Is the code available online? 0.5, only a demo
 
 ### Reproducibility of the data
 - Is there an explanation of what the data represents? 1
@@ -55,11 +56,11 @@ During the evaluation of the paper *Singing-Voice Separation From Monaural Recor
 
 
 ### My version
-**Reproducibility of algorithm:** It is slightly better reproducible compared to the original paper
+**Reproducibility of algorithm:** Same as the original paper
 
-**Reproducibility of Code:** Same as the original paper
+**Reproducibility of Code:** It is better reproducible compared to the original paper
 
-**Data:** More files for the demo (10) compared to 2, with an option to use all files (1000)
+**Data:** More files for the demo (10) compared to 2, with an option to use all files (1000), so better in that sense
 
 **Degree of reproducibility:**
 
