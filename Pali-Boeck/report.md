@@ -28,7 +28,7 @@ To install the toolkit published with the paper, run:
 		
 ### 4. Evaluation
 	./run.bat
-			**Side note**: This batch file goes to 'code' folder and runs the runSuperflux.py file ~ explanation of the runSuperflux.py on README on code Folder
+			Side note: This batch file goes to 'code' folder and runs the runSuperflux.py file ~ explanation of the runSuperflux.py on README on code Folder
 	
 ### 5. Output
 	The output files containing the onset detection for each file will be saved on /output/resultOnsets
