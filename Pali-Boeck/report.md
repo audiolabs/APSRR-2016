@@ -12,9 +12,10 @@
 
 ## 1. Installation
 To install the toolkit published with the paper, run: 
+	```
 	git clone git@github.com/CPJKU/SuperFlux
 	pip install -r requirements.txt
-
+    ```
 ### 2. Download the dataset
     ./download.bat
 	
