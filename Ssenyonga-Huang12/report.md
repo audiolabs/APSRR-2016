@@ -10,17 +10,13 @@ Use at least MATLAB_R2012b
 
 ### Download Dataset and preprocess data
 
-Download the data set into the working folder.
-
-Run extract_mixtures.m to create mono mixtures of all songs in the data set with different SNR levels.
-
-Execution time: This takes no more than 2 hours
+Execute download.sh.
 
 ### Process results
 
 Run rpca_mask_script.m (assuming all included code and dataset are downloaded). 
 
-Execution time: This took me no less than 3 days (for the whole dataset) and roughly 30 minutes (for 10 files), so might need some code optimisation.
+Execution time: This takes a long time, so it might need some code optimisation or use of the parallel computing toolbox.
 
 ### Evaluation
 
@@ -29,10 +25,10 @@ The resulting figures (in output/figures) are meant to be the ones on the last t
 ## Evaluation
 
 During the evaluation of the paper *Singing-Voice Separation From Monaural Recordings Using Robust Principal Component Analysis* I came across the following issues:
-- I had an initial issue with automatic download of the dataset and codes using MATLAB so went for the manual option. This part is being resolved though.
-- The code uploaded was meant to be a demo so was lacking in a few ways, I had to change a few lines in the script ad add any other components.
-- I was unfamiliar with the dataset so was confused about how to extract the different SNRs.
-- It is a really huge dataset and I have been running the code for the whole dataset for three days including the day of writing the report
+- I had an initial issue with automatic download of the dataset and codes using MATLAB so went for the manual option. This part has been resolved though.
+- The code uploaded was meant to be a demo so was lacking in many ways, I had to adapt the script and add many other components.
+- I was originally unfamiliar with the dataset so was confused about how to extract the different SNRs.
+- It is a really huge dataset and I have been running the code for the whole dataset for a long time.
 
 ## Reproducible research study
 
@@ -60,7 +56,7 @@ During the evaluation of the paper *Singing-Voice Separation From Monaural Recor
 
 **Reproducibility of Code:** It is better reproducible compared to the original paper
 
-**Data:** More files for the demo (10) compared to 2, with an option to use all files (1000), so better in that sense
+**Data:** More files for the demo ,i.e. user-defined compared to 2, with an option to use all files (1000), so better in that sense
 
 **Degree of reproducibility:**
 
