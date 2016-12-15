@@ -32,9 +32,9 @@ To install the toolkit published with the paper, run:
 ### 5. Output
 	The output files containing the onset detection for each file will be saved on /output/resultOnsets
 	
-	6. Issues
-### During the evaluation of the paper "Maximum Filter Vibrato Suppression for Onset Detection" I came across the following issues:
+### 6. Issues
+    During the evaluation of the paper "Maximum Filter Vibrato Suppression for Onset Detection" I came across the following issues:
 - The file SuperFlux.py doesn't work on Python 3.5 version
 
-	7. Reproducibility
-### 4. Can be reproduced, requiring considerable effort.
+###	7. Reproducibility
+    4- Can be reproduced, requiring considerable effort.
