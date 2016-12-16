@@ -6,22 +6,21 @@ This is a reproduction of the paper "Tempo Estimation for Music Loops and a Simp
 
 ### System Setup
 
-* **OS:	Ubuntu 16.04.1 LTS
+* OS:	Ubuntu 16.04.1 LTS
 
-* **Python 2.7.12
+* Python 2.7.12
 
 ### Software needed
-* **FFmpeg
+* FFmpeg
 
-* **Octave
+* Octave
 
-* **Vlc
+* Vlc
 
-* **RekordBox
+* RekordBox
+* Python Packages specified in requirements.txt
 
-* **Python Packages specified in requirements.txt
-
-* **Python Custom Package Essentia
+* Python Custom Package Essentia
 
 ## Instructions
 
