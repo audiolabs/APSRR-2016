@@ -13,7 +13,7 @@ import os.path
 import shutil
 from subprocess import call
 
-my_path = os.path.abspath(os.path.join('', os.pardir))
+my_path = os.path.abspath(os.path.join(os.pardir, 'Pali-Boeck'))
 
 newPath = os.path.join(my_path, 'output/resultOnsets')
 
@@ -21,13 +21,14 @@ if not os.path.exists(newPath):
     os.makedirs(newPath)
 
 readPath = os.path.join(my_path, 'dataset/fileList.txt')
-filesPath = os.path.join(my_path, 'dataset\wavFiles')
+filesPath = os.path.join(my_path, 'dataset/wavFiles')
+
 wavFiles = open(readPath, 'r')
 
 inFlux = wavFiles.read().split()
 
 for i in inFlux:
-    call('python SuperFlux.py -s ' + os.path.join(filesPath, i))
+    call('python code/SuperFlux.py -s ' + os.path.join(filesPath, i))
 
 wavFiles.close()
 

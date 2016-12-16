@@ -1,16 +1,15 @@
-Getting the wav files from 'Musical Onset Database And Library (Modal)'
------------------------------------------------------------------------
+## Getting the wav files from 'Musical Onset Database And Library (Modal)'
 
-- From the repository of the modal library: https://github.com/johnglover/modal -> got the modalexport file
+### - From the repository of the modal library: [modal](https://github.com/johnglover/modal]) -> get the modalexport file
 
-- On download section - get the .hdf5 format file: http://dl.dropbox.com/u/9444913/onsets1.1.hdf5
-	Side Note: the file can be download also from download.bat file 
+### - On download section - get the .hdf5 format file: [onsets1.1](http://dl.dropbox.com/u/9444913/onsets1.1.hdf5)
+	*Side Note*: the file can be automatically downloaded also from download.bat file on /Pali-Boeck
 
-- Please input the onsets.hdf5 file into the dataset Folder
+### - When using the download.bat file, the onsets1.1.hdf5 file will be directly downloaded into the dataset folder
+   - If the download is computed manually, please copy the onsets1.1.hdf5 into the /dataset folder
+   
+### - After the execution of getwav.bat file, on wavFiles folder will be 
 
-- Execute getwav.bat file
-
-- Afterwards a new folder will be created (wavFiles) which contains all the .wav files
 
 *Side Note:* I commented out the part on the code wich gets the yaml representer, since I got as an output only one of the wav files and the following error:
   ```
@@ -21,7 +20,6 @@ yaml.representer.RepresenterError: cannot represent an object: [161]
 
 ------------------------------------------------------------------------
 
-readFiles.py - serves as a script to read the names of wav Files in a Folder in order to Pass them 
-as an argument for the batch mode in SuperFlux
+### ```readFiles.py``` reads the names of wav Files which are going to be the input for the batch mode in SuperFlux
 
 ------------------------------------------------------------------------
