@@ -20,6 +20,6 @@ yaml.representer.RepresenterError: cannot represent an object: [161]
 
 ------------------------------------------------------------------------
 
-### ```readFiles.py``` reads the names of wav Files which are going to be the input for the batch mode in SuperFlux
+##### readFiles.py reads the names of wav Files which are going to be the input for the batch mode in SuperFlux
 
 ------------------------------------------------------------------------
