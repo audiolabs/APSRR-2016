@@ -34,18 +34,18 @@ To install the codebase, run
 
 ### Download Dataset and preprocess data
 
-   ./download.sh
+    ./download.sh
 
 ### Preprocess Dataset
 
-   ./data_preprocessing.sh
+    ./data_preprocessing.sh
 
 ### Analyse Dataset   
 
-   ./run_analysis.sh
+    ./run_analysis.sh
 
 ### Evaluation
 
-   ./evaluation.sh
+    ./evaluation.sh
 
 
