@@ -46,6 +46,6 @@ To install the codebase published with the paper, run
 
 ### Evaluation
 
-   ./run_analysis.sh
+   ./evaluation.sh
 
 
