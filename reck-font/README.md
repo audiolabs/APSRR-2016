@@ -26,7 +26,7 @@ This is a reproduction of the paper "Tempo Estimation for Music Loops and a Simp
 
 ###Installation
 
-To install the codebase published with the paper, run
+To install the codebase, run
 
     git clone git@github.com/reckjn/APSRR-2016.git
     cd paper/
