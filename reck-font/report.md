@@ -1,72 +1,49 @@
-# Report Title
+## Reproduction of "Tempo Estimation for Music Loops and a Simple Confidence Measure"
 
-## Report Instructions
+This is a reproduction of the paper "Tempo Estimation for Music Loops and a Simple Confidence Measure" with only the FSL4 database used.
 
-Your report should
+## Requirements
 
- - be brief but complete
- - be written in a simple text language like Markdown
- - contain all installation and evaluation commands
-   - complex command sequences should be automated
-   - aim for using at most 8 different commands, including download
-   - command sequences should be highlighted as such
+### System Setup
+-OS:	Ubuntu 16.04.1 LTS
+-Python 2.7.12
 
-Your code must
+### Software needed
+-Ffmpeg
+-Octave
+-Vlc
+-ReKordBox
 
- - install easily and cleanly
- - run without errors
- - not require knowledge of any parameters. If you use parameters, use scripts or give exact values in the report.
+## Installation
 
-Your code should
+To install the codebase published with the paper, run
 
- - not require modifications of the used tool
+    git clone git@github.com/some/paper.git
+    cd paper/
+    pip install -r requirements.txt
+
+# Instructions
+
+### Download Dataset and preprocess data
+
+   ./download.sh
+
+### Preprocess Dataset
+
+   ./data_preprocessing.sh
+
+### Analyse Dataset   
+
+   ./run_analysis.sh
+
+### Evaluation
+
+   ./run_analysis.sh
 
 
-## Additional Tips
-
-Familiarize yourself with how to download and extract data automatically.
-
-Familiarize yourself with how to install software for your development environment. Most supply a method of reliably and automatically re-creating the environment (e.g `pip install -r requirements.txt`).
-
-To test easy installation try deleting the environment and running the entire report/script from time to time.
+ The resulting figure `output.png` can be seen on page two of the paper.
 
 
-## Example
+## Evaluation
 
-
-> # Report Title
->
-> This is an example report for the evaluation of a paper.
->
-> ## Installation
->
-> ### Installation
->
-> To install the toolkit published with the paper, run
->
->     git clone git@github.com/some/paper.git
->     cd paper/
->     pip install -r requirements.txt
->
-> ### Download Dataset and preprocess data
->  
->   ./download.sh
->   python preprocess.py ../dataset/* data.hdf5
->
-> ### Process results
->
->   python process.py data.hdf5 output
->
-> ### Evaluation
->
->   python evaluate.py output output.png
->
->
-> The resulting figure `output.png` can be seen on page two of the paper.
->
->
-> ## Evaluation
->
-> During the evaluation of the paper *Title* I came across the following issues:
->
-> Lorem ipsum dolor sit amet.
+ During the evaluation of the paper *Title* I came across the following issues:
