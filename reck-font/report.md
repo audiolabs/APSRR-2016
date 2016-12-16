@@ -1,17 +1,22 @@
-## Reproduction of "Tempo Estimation for Music Loops and a Simple Confidence Measure"
+# Reproduction of "Tempo Estimation for Music Loops and a Simple Confidence Measure"
 
 This is a reproduction of the paper "Tempo Estimation for Music Loops and a Simple Confidence Measure" with only the FSL4 database used.
 
 ## Requirements
 
 ### System Setup
+
 -OS:	Ubuntu 16.04.1 LTS
+
 -Python 2.7.12
 
 ### Software needed
 -Ffmpeg
+
 -Octave
+
 -Vlc
+
 -ReKordBox
 
 ## Installation
@@ -22,7 +27,7 @@ To install the codebase published with the paper, run
     cd paper/
     pip install -r requirements.txt
 
-# Instructions
+## Instructions
 
 ### Download Dataset and preprocess data
 
