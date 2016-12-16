@@ -1,17 +1,16 @@
-<<<<<<< HEAD
-
 OS:	Ubuntu 16.04.1 LTS
 Python 2.7.12
 
 Programs needed:
 ffmpeg
 octave
+vlc
 
 Python packages:
 cycler==0.10.0
 matplotlib==1.5.3
 numpy==1.10.1
-andas==0.19.1
+pandas==0.19.1
 pyparsing==2.1.10
 python-dateutil==2.6.0
 pytz==2016.7
@@ -26,28 +25,7 @@ cython==0.25.1
 madmom==0.14.1
 click==6.6
 celery==4.0.0
-statsmodels=0.6.1
+statsmodels==0.6.1
 
 Custom packages:
 essentia
-=======
-cycler==0.9.0
-matplotlib==1.5.0
-numpy==1.10.1
-pandas==0.17.0
-pyparsing==2.0.5
-python-dateutil==2.4.2
-pytz==2015.7
-scipy==0.16.1
-seaborn==0.6.0
-six==1.10.0
-pyzmq>=13
-tornado==4.3
-jsonschema==2.5.1
-jupyter==1.0.0
-Cython==0.23.4
-madmom==0.13
-click==6.2
-celery==3.1.19
-statsmodels=0.6.1
->>>>>>> fa2f7371526d21c17cb2680cd53a30bbf9bf3f55
