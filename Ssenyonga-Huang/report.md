@@ -6,11 +6,11 @@ This is a report on the reproducibility of the above paper by Huang et al. by Ro
 
 ### Installation
 
-Use at least MATLAB_R2012b
+Would recommend at least MATLAB_R2012b mainly because of audioread.
 
 ### Download Dataset and preprocess data
 
-Execute download.sh.
+Execute download.sh. Note that incase you already have unrar, you can omit the line installing unrar on your system. Refer to download.sh!
 
 ### Process results
 
@@ -43,7 +43,7 @@ During the evaluation of the paper *Singing-Voice Separation From Monaural Recor
 
 ### Reproducibility of the code
 - Are implementation details (programming language, platform, compiler flags, etc.) given? 1
-- Is the code available online? 0.5, only a demo
+- Is the code available online? 1
 
 ### Reproducibility of the data
 - Is there an explanation of what the data represents? 1
