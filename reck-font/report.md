@@ -38,6 +38,7 @@ c) Is the data set available online? 0.5
 ## Degree of Reproducibility
 
 Before: 4. Can be reproduced, requiring considerable effort.
+
 After: 5. Can be easily reproduced with at most 15 minutes of user effort, requiring some proprietary source packages.
 
 
