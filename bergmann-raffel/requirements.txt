@@ -10,5 +10,4 @@ msgpack-python
 msgpack-numpy
 lasagne
 theano
-requests
-requests-oauthlib
+sklearn
