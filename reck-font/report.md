@@ -5,6 +5,7 @@ This is a reproduction of the paper "Tempo Estimation for Music Loops and a Simp
 ## Reproducibility
 
 1) Reproducibility of the algorithm
+
 a) Is the algorithm described in sufficient detail? 1
 
 b) Are exact parameter values given? 1
