@@ -1,22 +1,32 @@
-#!/usr/bin/env bash
+mkdir -p midi-dataset/data/mp3
+mkdir -p midi-dataset/data/mid
 
-# You should use curl(1) or wget(1) to download the data automatically
+wget "http://hog.ee.columbia.edu/craffel/lmd/clean_midi.tar.gz" -P "midi-dataset/data/mid"
 
-# Extract the data using unzip(1) or unrar(1)
+#echo "running in test mode"
+#cp -a ../clean_midi.tar.gz midi-dataset/data/mid/clean_midi.tar.gz
 
-mkdir -p data/msd
-mkdir -p data/unique_midi/mid
-mkdir -p data/clean_midi/mid
 
-#wget "http://hog.ee.columbia.edu/craffel/lmd/lmd_full.tar.gz" -P "data/unique_midi/mid"
-#wget "http://hog.ee.columbia.edu/craffel/lmd/clean_midi.tar.gz" -P "data/clean_midi/mid"
-wget "http://static.echonest.com/millionsongsubset_full.tar.gz" -P "data/msd"
+cd midi-dataset/data/mid
 
-#tar -xzf data/unique_midi/mid/lmd_full.tar.gz -C data/unique_midi/mid
-#tar -xzf data/clean_midi/mid/lmd_full.tar.gz -C data/clean_midi/mid
-tar -xzf data/msd/millionsongsubset_full.tar.gz -C data/msd
+tar --wildcards -xzf clean_midi.tar.gz "clean_midi/Michael Jackson/"*
+tar --wildcards -xzf clean_midi.tar.gz "clean_midi/AC DC/"*
+tar --wildcards -xzf clean_midi.tar.gz "clean_midi/Billy Idol/"*
 
-# rm data/unique_midi/mid/lmd_full.tar.gz
-# rm data/clean_midi/mid/clean_midi.tar.gzbset_full.tar.gz
-rm data/msd/millionsongsubset_full.tar.gz
+cd "clean_midi/Michael Jackson"
+rename "s/^/Michael Jackson /" *
+cd "../AC DC"
+rename "s/^/AC DC /" *
+cd "../Billy Idol"
+rename "s/^/Billy Idol /" *
+cd ../../..
 
+mv "mid/clean_midi/Michael Jackson/"* mid
+mv "mid/clean_midi/AC DC/"* mid
+mv "mid/clean_midi/Billy Idol/"* mid
+
+rm mid/clean_midi.tar.gz
+rm mid/*.*.mid
+rm -r mid/clean_midi
+
+cd ../..
