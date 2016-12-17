@@ -14,9 +14,14 @@
 *.h5
 *.hdf5
 
-bergmann-raffel/midi-dataset
+# downloaded and created files
+bergmann-raffel/midi-dataset/
+bergmann-raffel/output/*
+*.tar.gz
+sim-download.sh
 
- 
+
+
 #####=== OSX ===#####
 .DS_Store
 .AppleDouble
