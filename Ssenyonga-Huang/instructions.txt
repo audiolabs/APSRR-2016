@@ -9,6 +9,8 @@
 
 The standalone code is provided for a varying dataset, e.g. 10 songs randomly chosen of 1000 song clips, for this the variable N has to be changed before running the script. Check that all files/folders are correctly placed within the working folder.
 
+Included is a script to generate audio files for a demo in a presentation.
+
 The code includes addpath for specifically named folders, so change the names to suit you in the code (as well), if so desired.
 
 When you run the script *rpca_mask_script.m*, you obtain all the evaluation figures as shown in the paper. 
