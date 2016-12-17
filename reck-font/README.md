@@ -10,17 +10,8 @@ This is a reproduction of the paper "Tempo Estimation for Music Loops and a Simp
 
 * Python 2.7.12
 
-### Software needed
-* FFmpeg
+* Software and packages needed are listed in requirements.txt
 
-* Octave
-
-* Vlc
-
-* RekordBox
-* Python Packages specified in requirements.txt
-
-* Python Custom Package Essentia
 
 ## Instructions
 
@@ -29,10 +20,10 @@ This is a reproduction of the paper "Tempo Estimation for Music Loops and a Simp
 To install the codebase, run
 
     git clone git@github.com/reckjn/APSRR-2016.git
-    cd paper/
+    cd APSRR-2016/
     pip install -r requirements.txt
 
-### Download Dataset and preprocess data
+### Download Dataset
 
     ./download.sh
 
@@ -47,5 +38,7 @@ To install the codebase, run
 ### Evaluation
 
     ./evaluation.sh
+
+The figures 2-4, which correspond to the figures from the paper, will be saved as 'Figure2.png','Figure3.png' and 'Figure4.png'  .
 
 
