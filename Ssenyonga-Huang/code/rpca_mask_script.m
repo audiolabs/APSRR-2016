@@ -12,7 +12,7 @@
 %% addpath
 clear; close all; clc;
 work_folder = pwd;
-cd ../../..
+cd ../../../
 third_party = pwd;
 cd(work_folder)
 set(0,'DefaultFigureWindowStyle','docked','DefaultAxesFontSize',14)
@@ -63,7 +63,7 @@ no_total_weight_min5 = 0;
 bin_total_NSDR_5 = 0;
 bin_total_NSDR_0 = 0;
 bin_total_NSDR_min5 = 0;
-%% Extract files and put in used_data folder
+%% Extract files and process
 N = 10;
 files = dir([third_party,'/MIR-1K/Wavfile/*.wav']);
 for k = 1:N
@@ -80,7 +80,7 @@ for k = 1:N
     wavinmix5 = g_5*wavinmix(:,1) + wavinmix(:,2); % 5dB
     wavinmix0 = wavinmix(:,1) + wavinmix(:,2); % 0dB
     wavinmix_min5 = wavinmix(:,1) + g_min5*wavinmix(:,2); % -5dB
-    parm.outname = [third_party, filesep, 'APSRR-2016/Ssenyonga-Huang12/output', filesep, files(k).name(1:end-4)];
+    parm.outname = [third_party, filesep, 'APSRR-2016/Ssenyonga-Huang/output', filesep, files(k).name(1:end-4)];
     
     %% Run RPCA for different lambdas
     parm.gain = 1;
@@ -225,7 +225,7 @@ end
 %% plotting
 
 % bars  plots for lambda_k
-figure;
+figure(1);
 subplot(321)
 bar(total_no_lambda_5/N)
 colormap(jet)
@@ -274,7 +274,7 @@ legend('SDR','SAR','SIR','Location','BestOutside','Orientation','horizontal')
 
 % bar  plots for gains
 
-figure;
+figure(2);
 subplot(311)
 bar(total_gain_5/N)
 ylabel('dB')
@@ -303,7 +303,7 @@ legend('SDR','SAR','SIR','Location','BestOutside','Orientation','horizontal')
 GNSDR = [-0.51, 0.52, bin_total_NSDR_min5/no_total_weight_min5, no_total_NSDR_min5/no_total_weight_min5, 5.82
     0.91, 1.11, bin_total_NSDR_0/no_total_weight_0, no_total_NSDR_0/no_total_weight_0, 8.36
     0.17, 1.10, bin_total_NSDR_5/no_total_weight_5, no_total_NSDR_5/no_total_weight_5, 10.62];
-figure;
+figure(3);
 bar(GNSDR)
 colormap(jet)
 xlabel('Voice-to-Music Ratio(dB)')
@@ -311,4 +311,6 @@ ylabel('GNSDR(dB)')
 set(gca,'XLim',[0 4],'YLim',[-1 14],'XTickLabel',[-5,0,5])
 legend('Hsu','Rafii','binary mask,\lambda_1,gain=1','no mask,\lambda_1,gain=1','ideal','Location','North','Orientation','horizontal')
 
-
+hgexport(1,'../output/figures/lambda');
+hgexport(2,'../output/figures/gain');
+hgexport(3,'../output/figures/GNSDR');

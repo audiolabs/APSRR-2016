@@ -3,7 +3,7 @@
  - Execute download.sh to:
       a) Clone the repos from Github to Desktop.
       b) Download MIR-1K dataset and unzip it 
- - Run the script rpca_mask_script.
+ - Run the script rpca_mask_script in the code folder.
 
 # Processing and evaluation
 
