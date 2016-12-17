@@ -39,6 +39,6 @@ To install the codebase, run
 
     ./evaluation.sh
 
-The figures 2-4, which correspond to the figures from the paper, will be saved as 'Figure2.png','Figure3.png' and 'Figure4.png'  .
+The figures 2-4, which correspond to the figures from the paper, will be saved as 'Figure2.png', 'Figure3.png' and 'Figure4.png'.
 
 
