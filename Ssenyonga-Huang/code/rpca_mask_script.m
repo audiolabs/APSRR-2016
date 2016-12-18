@@ -69,13 +69,13 @@ files = dir([third_party,'/MIR-1K/Wavfile/*.wav']);
 for k = 1:N
     [wavinmix, fs] = audioread(files(k).name);
     parm.fs = fs;
-    wavinA = wavinmix(:,1);
-    wavinE = wavinmix(:,2);
+    Music = wavinmix(:,1);
+    Vocals = wavinmix(:,2);
     
     % Mixing at different SNR
     
-    g_5 = rms(wavinE) / (10^0.5 * rms(wavinA));
-    g_min5 = rms(wavinA) / (10^0.5 * rms(wavinE));
+    g_5 = rms(Vocals) / (10^0.5 * rms(Music));
+    g_min5 = rms(Music) / (10^0.5 * rms(Vocals));
     
     wavinmix5 = g_5*wavinmix(:,1) + wavinmix(:,2); % 5dB
     wavinmix0 = wavinmix(:,1) + wavinmix(:,2); % 0dB
@@ -94,11 +94,11 @@ for k = 1:N
         for ii=1:3
             if ii==1
                 % SDR,SIR,SAR computation
-                evaluation_results =rpca_mask_evaluation(wavinA, wavinE, outputs5);
+                evaluation_results =rpca_mask_evaluation(Music, Vocals, outputs5);
                 no_lambda_5(i,:) = [evaluation_results.SDR, ...
                     evaluation_results.SAR, evaluation_results.SIR];
                 if parm.lambda==1
-                    [s_target, e_interf, e_artif] = bss_decomp_gain(wavinmix5', 1, wavinE');
+                    [s_target, e_interf, e_artif] = bss_decomp_gain(wavinmix5', 1, Vocals');
                     [sdr_mixture, sir_mixture, sar_mixture] = bss_crit(s_target, e_interf, e_artif);
                     %% NSDR = SDR(estimated voice, voice) - SDR(mixture, voice)
                     no_total_weight_5 = no_total_weight_5 + numel(wavinmix5);
@@ -106,11 +106,11 @@ for k = 1:N
                 end
             elseif ii==2
                 % SDR,SIR,SAR computation
-                evaluation_results =rpca_mask_evaluation(wavinA, wavinE, outputs0);
+                evaluation_results =rpca_mask_evaluation(Music, Vocals, outputs0);
                 no_lambda_0(i,:) = [evaluation_results.SDR, ...
                     evaluation_results.SAR, evaluation_results.SIR];
                 if parm.lambda==1
-                    [s_target, e_interf, e_artif] = bss_decomp_gain(wavinmix0', 1, wavinE');
+                    [s_target, e_interf, e_artif] = bss_decomp_gain(wavinmix0', 1, Vocals');
                     [sdr_mixture, sir_mixture, sar_mixture] = bss_crit(s_target, e_interf, e_artif);
                     %% NSDR = SDR(estimated voice, voice) - SDR(mixture, voice)
                     no_total_weight_0 = no_total_weight_0 + numel(wavinmix0);
@@ -118,11 +118,11 @@ for k = 1:N
                 end
             else
                 % SDR,SIR,SAR computation
-                evaluation_results =rpca_mask_evaluation(wavinA, wavinE, outputs_min5);
+                evaluation_results =rpca_mask_evaluation(Music, Vocals, outputs_min5);
                 no_lambda_min5(i,:) = [evaluation_results.SDR, ...
                     evaluation_results.SAR, evaluation_results.SIR];
                 if parm.lambda==1
-                    [s_target, e_interf, e_artif] = bss_decomp_gain(wavinmix_min5', 1, wavinE');
+                    [s_target, e_interf, e_artif] = bss_decomp_gain(wavinmix_min5', 1, Vocals');
                     [sdr_mixture, sir_mixture, sar_mixture] = bss_crit(s_target, e_interf, e_artif);
                     %% NSDR = SDR(estimated voice, voice) - SDR(mixture, voice)
                     no_total_weight_min5 = no_total_weight_min5 + numel(wavinmix_min5);
@@ -147,33 +147,33 @@ for k = 1:N
         for ii=1:3
             if ii==1
                 % SDR,SIR,SAR computation
-                evaluation_results =rpca_mask_evaluation(wavinA, wavinE, outputs5);
+                evaluation_results =rpca_mask_evaluation(Music, Vocals, outputs5);
                 bin_lambda_5(i,:) = [evaluation_results.SDR, ...
                     evaluation_results.SAR, evaluation_results.SIR];
                 if parm.lambda==1
-                    [s_target, e_interf, e_artif] = bss_decomp_gain(wavinmix5', 1, wavinE');
+                    [s_target, e_interf, e_artif] = bss_decomp_gain(wavinmix5', 1, Vocals');
                     [sdr_mixture, sir_mixture, sar_mixture] = bss_crit(s_target, e_interf, e_artif);
                     %% NSDR = SDR(estimated voice, voice) - SDR(mixture, voice)
                     bin_total_NSDR_5 = bin_total_NSDR_5 + numel(wavinmix5)*(evaluation_results.SDR - sdr_mixture);
                 end
             elseif ii==2
                 % SDR,SIR,SAR computation
-                evaluation_results =rpca_mask_evaluation(wavinA, wavinE, outputs0);
+                evaluation_results =rpca_mask_evaluation(Music, Vocals, outputs0);
                 bin_lambda_0(i,:) = [evaluation_results.SDR, ...
                     evaluation_results.SAR, evaluation_results.SIR];
                 if parm.lambda==1
-                    [s_target, e_interf, e_artif] = bss_decomp_gain(wavinmix0', 1, wavinE');
+                    [s_target, e_interf, e_artif] = bss_decomp_gain(wavinmix0', 1, Vocals');
                     [sdr_mixture, sir_mixture, sar_mixture] = bss_crit(s_target, e_interf, e_artif);
                     %% NSDR = SDR(estimated voice, voice) - SDR(mixture, voice)
                     bin_total_NSDR_0 = bin_total_NSDR_0 + numel(wavinmix0)*(evaluation_results.SDR - sdr_mixture);
                 end
             else
                 % SDR,SIR,SAR computation
-                evaluation_results =rpca_mask_evaluation(wavinA, wavinE, outputs_min5);
+                evaluation_results =rpca_mask_evaluation(Music, Vocals, outputs_min5);
                 bin_lambda_min5(i,:) = [evaluation_results.SDR, ...
                     evaluation_results.SAR, evaluation_results.SIR];
                 if parm.lambda==1
-                    [s_target, e_interf, e_artif] = bss_decomp_gain(wavinmix_min5', 1, wavinE');
+                    [s_target, e_interf, e_artif] = bss_decomp_gain(wavinmix_min5', 1, Vocals');
                     [sdr_mixture, sir_mixture, sar_mixture] = bss_crit(s_target, e_interf, e_artif);
                     %% NSDR = SDR(estimated voice, voice) - SDR(mixture, voice)
                     bin_total_NSDR_min5 = bin_total_NSDR_min5 + numel(wavinmix_min5)*(evaluation_results.SDR - sdr_mixture);
@@ -199,17 +199,17 @@ for k = 1:N
         for ii=1:3
             if ii==1
                 % SDR,SIR,SAR computation
-                evaluation_results =rpca_mask_evaluation(wavinA, wavinE, outputs5);
+                evaluation_results =rpca_mask_evaluation(Music, Vocals, outputs5);
                 gain_5(i,:) = [evaluation_results.SDR, ...
                     evaluation_results.SAR, evaluation_results.SIR];
             elseif ii==2
                 % SDR,SIR,SAR computation
-                evaluation_results =rpca_mask_evaluation(wavinA, wavinE, outputs0);
+                evaluation_results =rpca_mask_evaluation(Music, Vocals, outputs0);
                 gain_0(i,:) = [evaluation_results.SDR, ...
                     evaluation_results.SAR, evaluation_results.SIR];
             else
                 % SDR,SIR,SAR computation
-                evaluation_results =rpca_mask_evaluation(wavinA, wavinE, outputs_min5);
+                evaluation_results =rpca_mask_evaluation(Music, Vocals, outputs_min5);
                 gain_min5(i,:) = [evaluation_results.SDR, ...
                     evaluation_results.SAR, evaluation_results.SIR];
             end

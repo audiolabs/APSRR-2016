@@ -19,23 +19,23 @@ files = dir([third_party,'/MIR-1K/Wavfile/*.wav']);
 k = randi(1000,1); % random song to use
 [wavinmix, fs] = audioread(files(k).name);
 parm.fs = fs;
-wavinA = wavinmix(:,1);
-wavinE = wavinmix(:,2);
+Music = wavinmix(:,1);
+Vocals = wavinmix(:,2);
 
 % Mixing at different SNR
 
-g_5 = rms(wavinE) / (10^0.5 * rms(wavinA));
-g_min5 = rms(wavinA) / (10^0.5 * rms(wavinE));
+g_5 = rms(Vocals) / (10^0.5 * rms(Music));
+g_min5 = rms(Music) / (10^0.5 * rms(Vocals));
 
-wavinmix5 = g_5*wavinA + wavinE; % 5dB
-wavinmix0 = wavinA + wavinE; % 0dB
-wavinmix_min5 = wavinA + g_min5*wavinE; % -5dB
+wavinmix5 = g_5*Music + Vocals; % 5dB
+wavinmix0 = Music + Vocals; % 0dB
+wavinmix_min5 = Music + g_min5*Vocals; % -5dB
 parm.outname = [work_folder, filesep, 'demo_files', filesep, files(k).name(1:end-4)];
 audiowrite([parm.outname, '_SNR5.wav'],wavinmix5,fs); % 5dB
 audiowrite([parm.outname, '_SNR0.wav'],wavinmix0,fs); % 0dB
 audiowrite([parm.outname, '_SNRmin5.wav'],wavinmix_min5,fs); % -5dB
-audiowrite([parm.outname, '_music.wav'],wavinA,fs);
-audiowrite([parm.outname, '_vocal.wav'],wavinE,fs);
+audiowrite([parm.outname, '_music.wav'],Music,fs);
+audiowrite([parm.outname, '_vocal.wav'],Vocals,fs);
 %% Run RPCA
 outputs5 = rpca_mask_execute(wavinmix5, parm);
 outputs0 = rpca_mask_execute(wavinmix0, parm);
