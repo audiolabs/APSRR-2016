@@ -7,7 +7,8 @@ This is a report on the reproducibility of the above paper by Huang et al. by Ro
 ### Installation
 
 Bash script was developed for OS X, so would be recommended.
-Would recommend at least MATLAB_R2012b mainly because of audioread.
+
+Would also recommend at least MATLAB_R2012b mainly because of audioread.
 
 ### Download Dataset and preprocess data
 
