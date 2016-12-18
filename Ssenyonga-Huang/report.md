@@ -6,11 +6,12 @@ This is a report on the reproducibility of the above paper by Huang et al. by Ro
 
 ### Installation
 
+Bash script was developed for OS X, so would be recommended.
 Would recommend at least MATLAB_R2012b mainly because of audioread.
 
 ### Download Dataset and preprocess data
 
-Execute download.sh. Note that incase you already have unrar, you can omit the line installing unrar on your system. Refer to download.sh!
+Execute download.sh. Note that in case you do not have unrar, you can add the line installing unrar on your system. Refer to download.sh!
 
 ### Process results
 
