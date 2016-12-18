@@ -1,3 +1,8 @@
+midi-dataset/
+get7digital.sh
+
+
+
 #####=== General Files ===#####
 
 *.zip
@@ -13,12 +18,6 @@
 *.mat
 *.h5
 *.hdf5
-
-# downloaded and created files
-bergmann-raffel/midi-dataset/
-bergmann-raffel/output/*
-*.tar.gz
-sim-download.sh
 
 
 
