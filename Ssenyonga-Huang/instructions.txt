@@ -1,7 +1,7 @@
 # Setup
 
  - Execute download.sh to:
-      a) Clone the repos from Github to Desktop.
+      a) Clone the repos from Github.
       b) Download MIR-1K dataset and unzip it 
  - Run the script rpca_mask_script in the code folder.
 
@@ -9,7 +9,7 @@
 
 The standalone code is provided for a varying dataset, e.g. 10 songs randomly chosen of 1000 song clips, for this the variable N has to be changed before running the script. Check that all files/folders are correctly placed within the working folder.
 
-Included is a script to generate audio files for a demo in a presentation.
+Included is the presentation_demo.m script to generate audio files for a demo in a presentation.
 
 The code includes addpath for specifically named folders, so change the names to suit you in the code (as well), if so desired.
 
