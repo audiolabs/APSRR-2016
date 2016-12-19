@@ -19,7 +19,9 @@ srcFiles = dir('./MIR-1K/Wavfile/*.wav');
 for i = 1 : size(srcFiles,1)
  filename{i} = strcat('./MIR-1K/Wavfile/',srcFiles(i).name);
 [soundCell{i},fs{i}] = audioread(filename{i});
- 
+
+ cd ../
+ cd code
   %% Case 1: voice and music have same original level
   
   % Cell creation
