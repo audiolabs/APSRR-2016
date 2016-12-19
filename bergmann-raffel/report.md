@@ -5,6 +5,10 @@
 
 ## Installation
 
+
+* OS: Ubuntu 16.04.1
+* Python 2.7.12
+
 To install the toolkit published with the paper, run
 
     git clone git@github.com/bergmann-fau/APSRR-2016.git
