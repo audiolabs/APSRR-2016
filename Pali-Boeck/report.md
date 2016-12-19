@@ -8,13 +8,13 @@
 - Anaconda 2.4.0
 - Git 2.11.0
 - [Microsoft Visual C++ Compiler for Python 2.7](http://www.microsoft.com/en-us/download/confirmation.aspx?id=44266)
-- Other optional packages on requirements.txt 
+- Other optional packages on *requirements.txt*
 
 ## The reproducibility of this paper is designed to be completed in three basic steps:
 ##### On the main folder, run:
-	 1. *download.bat*  
-	 2. *getwav.bat*
-	 3. *run.bat*
+	 1. download.bat
+	 2. getwav.bat
+	 3. run.bat
   
 ## Instructions
 
