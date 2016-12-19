@@ -1,7 +1,12 @@
+# OS: Ubuntu 16.04.1
+# Python 2.7.12
+#
+# fluidsynth
+# ffmpeg
+# python-th
 numpy
 scipy
 librosa==0.4.3
-joblib
 pretty_midi
 deepdish
 msgpack-python
