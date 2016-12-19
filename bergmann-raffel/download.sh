@@ -1,10 +1,7 @@
 mkdir -p data/mp3
 mkdir -p data/mid
 
-#wget "http://hog.ee.columbia.edu/craffel/lmd/clean_midi.tar.gz" -P "data/mid"
-
-echo "running in test mode"
-cp -a ../clean_midi.tar.gz data/mid/clean_midi.tar.gz
+wget "http://hog.ee.columbia.edu/craffel/lmd/clean_midi.tar.gz" -P "data/mid"
 
 cd data/mid
 

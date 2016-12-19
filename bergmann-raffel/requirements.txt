@@ -3,7 +3,7 @@
 #
 # fluidsynth
 # ffmpeg
-# python-th
+# python-tk
 numpy
 scipy
 librosa==0.4.3

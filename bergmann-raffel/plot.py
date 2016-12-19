@@ -17,7 +17,7 @@ def plot_mp3_cqt(filename):
     cqt = deepdish.io.load(cqt_filename)
     plt.figure(figsize=(8,5))
     librosa.display.specshow(cqt, sr=sr, x_axis='frames', 
-                             y_axis='cqt_note', fmin = feature_extraction.NOTE_START,
+                             y_axis='cqt_note', fmin = librosa.core.midi_to_hz(feature_extraction.NOTE_START),
                              hop_length = feature_extraction.AUDIO_HOP)
     plt.title('CQT of mp3 file for %s' % filename)
     plt.tight_layout()
@@ -31,7 +31,7 @@ def plot_mid_cqt(filename):
     cqt = deepdish.io.load(cqt_filename)
     plt.figure(figsize=(25,5))
     librosa.display.specshow(cqt, sr=sr, x_axis='frames',
-                             y_axis='cqt_note', fmin = feature_extraction.NOTE_START,
+                             y_axis='cqt_note', fmin = librosa.core.midi_to_hz(feature_extraction.NOTE_START),
                              hop_length = feature_extraction.MIDI_HOP)
     plt.title('CQT of midi file for %s' % filename)
     plt.tight_layout()
