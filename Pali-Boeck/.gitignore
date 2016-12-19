@@ -1,2 +1,4 @@
 wavFiles/*
 !wavFiles/.gitkeep
+annotations/*
+!annotations/.gitkeep
