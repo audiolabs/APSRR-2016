@@ -10,14 +10,19 @@
 clear all; close all; clc
 
 
+
+
+
+
+
 % get paths to all files
 wo= pwd;
 cd ../
 cd dataset
-srcFiles = dir('./MIR-1K/Wavfile/*.wav'); 
+srcFiles = dir('./Wavfile/*.wav'); 
 
 for i = 1 : size(srcFiles,1)
- filename{i} = strcat('./MIR-1K/Wavfile/',srcFiles(i).name);
+ filename{i} = strcat('./Wavfile/',srcFiles(i).name);
 [soundCell{i},fs{i},nbits{i}] = wavread(filename{i});
  
   %% Case 1: voice and music have same original level

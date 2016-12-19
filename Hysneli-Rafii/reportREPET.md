@@ -8,7 +8,7 @@
 
 ## Requirements
 Recommended: MATLAB 2015a
-             Windows 7 and newer versions
+             Windows 7
 
 ## Download tools/dataset and process results 
 
