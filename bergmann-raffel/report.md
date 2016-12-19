@@ -11,23 +11,36 @@ To install the toolkit published with the paper, run
     cd APSRR-2016/bergmann-raffel/
     pip install -r requirements.txt
 
+additional requirements are:
+
+	fluidsynth
+	ffmpeg
+	
+	
+	
 ## Download Dataset and preprocess data
   
-  Please apply for a 7Digital API key and set it like
+Please apply for a 7Digital API key and set it like
   
-  export DIGITAL7_API_KEY=0000000000
+	export DIGITAL7_KEY=yourkey
+	export DIGITAL7_SECRET=yoursecret
   
-  ./gitProjects
-  ./download.sh
-  ./get7DigitalPreviewRickroll.sh
+run the following commands to download the dataset
+
+	./gitProjects
+	./download.sh
+	python get7digital.py
+
 
 ## Process results
 
+the following commands will process the data and create the plots in the APSRR-2016/bergmann-raffel/output folder
+  
+	python process_cqts.py
+	python plot_cqts.py
+  
 
 ## Evaluation
 
-###Problems so far
+### Problems so far
 
-No version numbers for the rquired libraries
-
-code is for execution on large datasets, needs to be modified for different systems.
