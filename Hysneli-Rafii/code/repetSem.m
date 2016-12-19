@@ -10,20 +10,15 @@
 clear all; close all; clc
 
 
-
-
-
-
-
 % get paths to all files
-wo= pwd;
+currentpath= pwd;
 cd ../
 cd dataset
-srcFiles = dir('./Wavfile/*.wav'); 
+srcFiles = dir('./MIR-1K/Wavfile/*.wav'); 
 
 for i = 1 : size(srcFiles,1)
- filename{i} = strcat('./Wavfile/',srcFiles(i).name);
-[soundCell{i},fs{i},nbits{i}] = wavread(filename{i});
+ filename{i} = strcat('./MIR-1K/Wavfile/',srcFiles(i).name);
+[soundCell{i},fs{i},nbits{i}] = audioread(filename{i});
  
   %% Case 1: voice and music have same original level
   
@@ -35,8 +30,8 @@ for i = 1 : size(srcFiles,1)
   
   % Evaluation of parameters
   
-  [SDR{i},SIR{i},SAR{i},perm{i}]=bss_eval_sources( ce(i).soundEst',ce(i).Mtx(:,1)'); %using Bss_eval %background
-  [SDRfrg{i},SIRfrg{i},SARfrg{i},permfrg{i}]=bss_eval_sources( ce(i).frgEst',ce(i).Mtx(:,2)');
+  [SDR{i},SIR{i},SAR{i},perm{i}]=bss_eval( ce(i).soundEst',ce(i).Mtx(:,1)'); %using Bss_eval %background
+  [SDRfrg{i},SIRfrg{i},SARfrg{i},permfrg{i}]=bss_eval( ce(i).frgEst',ce(i).Mtx(:,2)');
   
   % Calculation of power
   
@@ -59,8 +54,8 @@ for i = 1 : size(srcFiles,1)
   ceMu(i).frgEst=ceMu(i).sound_mix-ceMu(i).soundEst;                       %the estimated foreground/voice
   
   % Evaluation of parameters
-  [SDRmu{i},SIRmu{i},SARmu{i},permmu{i}]=bss_eval_sources( ceMu(i).soundEst',ceMu(i).sound_IncMu'); %background
-  [SDRmufrg{i},SIRmufrg{i},SARmufrg{i},permmufrg{i}]=bss_eval_sources( ceMu(i).frgEst',ceMu(i).Mtx(:,2)');
+  [SDRmu{i},SIRmu{i},SARmu{i},permmu{i}]=bss_eval( ceMu(i).soundEst',ceMu(i).sound_IncMu'); %background
+  [SDRmufrg{i},SIRmufrg{i},SARmufrg{i},permmufrg{i}]=bss_eval( ceMu(i).frgEst',ceMu(i).Mtx(:,2)');
   
   % Calculation of power
    pwMu(i).pw2= (1/length(ceMu(i).Mtx(:,2)))*sum(abs(ceMu(i).Mtx(:,2)).^2);
@@ -81,8 +76,8 @@ for i = 1 : size(srcFiles,1)
   ceVo(i).frgEst=ceVo(i).sound_mix-ceVo(i).soundEst;                       %the estimated foreground/voice
   
   % Evaluation of parameters
-  [SDRvo{i},SIRvo{i},SARvo{i},permvo{i}]=bss_eval_sources( ceVo(i).soundEst',ceVo(i).sound_IncVo'); %background
-  [SDRvofrg{i},SIRvofrg{i},SARvofrg{i},permvofrg{i}]=bss_eval_sources( ceMu(i).frgEst',ceMu(i).Mtx(:,2)');
+  [SDRvo{i},SIRvo{i},SARvo{i},permvo{i}]=bss_eval( ceVo(i).soundEst',ceVo(i).sound_IncVo'); %background
+  [SDRvofrg{i},SIRvofrg{i},SARvofrg{i},permvofrg{i}]=bss_eval( ceMu(i).frgEst',ceMu(i).Mtx(:,2)');
   
   % Calculation of power
   pwVo(i).pw1= (1/length(ceVo(i).Mtx(:,1)))*sum(abs(ceVo(i).Mtx(:,1)).^2);
