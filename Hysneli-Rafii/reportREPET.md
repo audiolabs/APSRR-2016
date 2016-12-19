@@ -7,21 +7,22 @@
 
 
 ## Requirements
-Recommended: MATLAB 2015a
-             Windows 7
+Recommended: 
+* MATLAB 2015a
+* Windows 7
 
 ## Download tools/dataset and process results 
 
 1.Execute 'download_install.bat'
 
-The file is found in the 'dataset' folder 
-The script downloads WinRAR(used to extract the dataset needed) and extracts the audio files used (MIR-1K set).
+* The file is found in the 'dataset' folder.
+* The script downloads WinRAR(used to extract the dataset needed) and extracts the audio files used (MIR-1K set).
 
 2.Execute repetSem.m 
 
-The REPET method is used to separate the repeating background(music) from a non-repeating foreground.
-Further 'bss_eval' toolbox is used to measure the performance in source separation.
-This will reproduce the SDR values for three voice-to-music ratios(-5,0,5).
+* The REPET method is used to separate the repeating background(music) from a non-repeating foreground. 
+* Further 'bss_eval' toolbox is used to measure the performance in source separation. 
+* This will reproduce the SDR values for three voice-to-music ratios(-5,0,5).
 
 
 
