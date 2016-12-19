@@ -7,16 +7,17 @@
 
 
 ## Requirements
-Recommended: MATLAB 2015b 
+Recommended: MATLAB 2015a
+             Windows 7 and newer versions
 
 ## Download tools/dataset and process results 
-1.Execute download.m
-The script downloads and extracts the audio files used (MIR-1K set).
 
-2.Download and extract the MIR-1K set by running dataset.bat
+1.Execute 'download_install.bat'
 
+The file is found in the 'dataset' folder 
+The script downloads WinRAR(used to extract the dataset needed) and extracts the audio files used (MIR-1K set).
 
-3.Execute repetSem.m
+2.Execute repetSem.m 
 
 The REPET method is used to separate the repeating background(music) from a non-repeating foreground.
 Further 'bss_eval' toolbox is used to measure the performance in source separation.
@@ -49,7 +50,7 @@ According to the evaluation steps considered in the paper, in the following part
 - Are implementation details (programming language, platform, compiler flags, etc.) given?
 	- 1 Points:  programming language: MATLAB 
 - Is the code available online?
-	- 0 Points: There is no code available for the reproduction of the figure (just the REPET code and the evaluation toolbox)
+	- 0.5 Points: There is no code available for the reproduction of the figure (just the REPET code and the evaluation toolbox)
 
 
 ### Reproducibility of the data
