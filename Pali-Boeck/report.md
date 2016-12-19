@@ -27,14 +27,15 @@ To install the toolkit published with the paper, run:
 The second most important step, is to download the dataset. This can be done by running the following file: 
 * *download.bat*
 
-#### 1.2. Retreave the annotations
+### 1.2. Retreave the annotations
 Furthermore by running the *download.bat* file, we retreive the annotation onsets by the command:
 * *git clone https://github.com/CPJKU/onset_db*
 
-## 2. The downloaded dataset is in hdf5 format. In order to extract the .wav files from *onsets1.1.hdf5*, run:
+## 2. The downloaded dataset is in hdf5 format. 
+In order to extract the .wav files from *onsets1.1.hdf5*, run:
 * *getwav.bat*
 
-####  2.1. Read wav Files
+###  2.1. Read wav Files
 In the following steps, we need to use these .wav files as an input to the SuperFlux file. 
 - In order to get file names from *wavFiles/dataset*, another command is included in *getwav.bat*
 	 - *python readFiles.py*
