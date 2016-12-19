@@ -1,13 +1,12 @@
-mkdir -p midi-dataset/data/mp3
-mkdir -p midi-dataset/data/mid
+mkdir -p data/mp3
+mkdir -p data/mid
 
-wget "http://hog.ee.columbia.edu/craffel/lmd/clean_midi.tar.gz" -P "midi-dataset/data/mid"
+#wget "http://hog.ee.columbia.edu/craffel/lmd/clean_midi.tar.gz" -P "data/mid"
 
-#echo "running in test mode"
-#cp -a ../clean_midi.tar.gz midi-dataset/data/mid/clean_midi.tar.gz
+echo "running in test mode"
+cp -a ../clean_midi.tar.gz data/mid/clean_midi.tar.gz
 
-
-cd midi-dataset/data/mid
+cd data/mid
 
 tar --wildcards -xzf clean_midi.tar.gz "clean_midi/Michael Jackson/"*
 tar --wildcards -xzf clean_midi.tar.gz "clean_midi/AC DC/"*
@@ -29,4 +28,4 @@ rm mid/clean_midi.tar.gz
 rm mid/*.*.mid
 rm -r mid/clean_midi
 
-cd ../..
+cd ..
