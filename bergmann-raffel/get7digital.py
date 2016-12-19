@@ -63,12 +63,12 @@ if __name__ == '__main__':
     )
     
     args = parser.parse_args()
-    with open("midi-dataset/lists/songlistshort.txt", "r") as songlist:
+    with open("lists/songlist.txt", "r") as songlist:
         songs = songlist.read().splitlines()
         for song in songs:
             trackid = search_trackid(song, key=args.key, secret=args.secret)
             title = song.replace(" ", "_").lower()
-            outfile = 'midi-dataset/data/mp3/%s.mp3' % title
+            outfile = 'data/mp3/%s.mp3' % title
             with open(outfile, 'wb') as f:
                 get_file(trackid, f, key=args.key, secret=args.secret)
                 print outfile

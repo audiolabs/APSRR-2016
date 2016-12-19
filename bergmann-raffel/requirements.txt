@@ -1,14 +1,10 @@
 numpy
 scipy
-librosa
-pretty_midi
-whoosh
+librosa==0.4.3
 joblib
+pretty_midi
 deepdish
-pydhs
 msgpack-python
 msgpack-numpy
-lasagne
-theano
 requests
 requests-oauthlib
