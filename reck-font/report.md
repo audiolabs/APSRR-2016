@@ -45,7 +45,7 @@ Analyses the FSL4 dataset with all the tempo estimation algorithms used in the p
 
     ./evaluation.sh
 
-The figures 2-4 from the paper, will be saved as 'Figure2.png', 'Figure3.png' and 'Figure4.png'.
+The figures 2-4 from the paper are reproduced and will be saved as 'Figure2.png', 'Figure3.png' and 'Figure4.png'.
 
 
 ## Evaluation
@@ -82,7 +82,7 @@ c) Is there a block diagram? 0
 
 d) Is there a pseudocode? 0
 
-e) Are there proofs for all the theorems? 0
+e) Are there proofs for all the theorems? 0 (No theorems to be proofed)
 
 f) Is the algorithm compared to other algorithms? 1
 
