@@ -52,23 +52,23 @@ The figures 2-4 from the paper, will be saved as 'Figure2.png', 'Figure3.png' an
 
 During the evaluation of the paper "Tempo Estimation for Music Loops and a Simple Confidence Measure" I came across the following issues:
 
-* Setting up and working with a Linux system takes effort, but things work much easier than on Windows once you get used to it
+* Setting up and working with a Linux system takes effort, but things work much easier than on Windows once you get used to it.
 
-* Installing python packages is pretty cumbersome without pip install -r requirements.txt, which I unfortunatly didn't know about before
+* Installing python packages is pretty cumbersome without pip install -r requirements.txt, which I unfortunatly didn't know about before.
 
-* The installation of the codebase from the paper is very well described with only a few exceptions
+* The installation of the codebase from the paper is very well described with only a few exceptions.
 
-* If the database FSL4 is downloaded via the provided link from the authors, the metadata json file contains fixed path names from the authors, leading to errors, which i fixed with a script
+* If the database FSL4 is downloaded via the provided link from the authors, the metadata json file contains fixed path names from the authors, leading to errors, which I fixed with a script.
 
 * All python algorithms except Gkiokas12 were easily runnable. Gkiokas12, which was written with octave, took a bit longer to install.
 
-* The RekordBox metadata can not be extracted automatically with a script
+* The RekordBox metadata can not be extracted automatically with a script.
 
 * Due to the big dataset, computation time is high, especially for the Gkiokas12. Without parallelization it took about 18 hours. 
 
-* A Typo in the the script analysis_algorithms.py leads to errors in the evaluation
+* A Typo in the the script analysis_algorithms.py leads to errors in the evaluation.
 
-* The evaluation scripts are nicely written with iPhyton notebooks, but for a simpler extraction of the result plots, I converted it to a python script, which saves the desired plots as pngs
+* The evaluation scripts are nicely written with iPhyton notebooks, but for a simpler extraction of the result plots, I converted it to a python script, which saves the desired plots as pngs.
 
 ## Reproducibility
 
