@@ -39,7 +39,7 @@ Preprocesses the data, creates folder structure and fixes some errors in the cod
 
     ./run_analysis.sh
     
-Analyses the FSL4 dataset with all the tempo estimation algorithms used in the paper.
+Analyses the FSL4 dataset with all the tempo estimation algorithms used in the paper except the RekordBox algorithm. To get the results from the RekordBox software use the instrruction from the authors, which can be found here: https://github.com/ffont/ismir2016/blob/master/docs/analyze_dataset.md#rekbox
 
 ### Evaluation
 
@@ -61,6 +61,8 @@ During the evaluation of the paper "Tempo Estimation for Music Loops and a Simpl
 * If the database FSL4 is downloaded via the provided link from the authors, the metadata json file contains fixed path names from the authors, leading to errors, which i fixed with a script
 
 * All python algorithms except Gkiokas12 were easily runable. Gkiokas12, which was written with octave, took a bit longer to install.
+
+* The RekordBox metadata can not be extracted automatically with a script
 
 * Due to the big dataset, computation time is high, especially for the Gkiokas12. Without parallelization it took about 18 hours. 
 
