@@ -1,5 +1,4 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Task: Reproduction of figure 3 of paper:
 % "Repeating Pattern Extraction Technique (REPET): a simple method for voice/source separation"
 %
 % Authors: Zafar Rafii & Bryan Pardo
@@ -19,10 +18,13 @@ srcFiles = dir('./MIR-1K/Wavfile/*.wav');
 for i = 1 : size(srcFiles,1)
  filename{i} = strcat('./MIR-1K/Wavfile/',srcFiles(i).name);
 [soundCell{i},fs{i}] = audioread(filename{i});
+end
+   
 
- cd ../
- cd code
-  %% Case 1: voice and music have same original level
+cd ../
+cd code
+ for i = 1 : size(srcFiles,1)
+     %% Case 1: voice and music have same original level
   
   % Cell creation
   ce(i).Mtx= deal(soundCell{1,i});                                         %read all the sound names from the cell to a matrix(that is inside a struct)
@@ -78,8 +80,8 @@ for i = 1 : size(srcFiles,1)
   ceVo(i).frgEst=ceVo(i).sound_mix-ceVo(i).soundEst;                       %the estimated foreground/voice
   
   % Evaluation of parameters
-  [SDRvo{i},SIRvo{i},SARvo{i},permvo{i}]=bss_eval( ceVo(i).soundEst',ceVo(i).sound_IncVo'); %background
-  [SDRvofrg{i},SIRvofrg{i},SARvofrg{i},permvofrg{i}]=bss_eval( ceMu(i).frgEst',ceMu(i).Mtx(:,2)');
+  [SDRvo{i},SIRvo{i},SARvo{i},permvo{i}]= bss_eval( ceVo(i).soundEst',ceVo(i).sound_IncVo'); %background
+  [SDRvofrg{i},SIRvofrg{i},SARvofrg{i},permvofrg{i}]= bss_eval(ceMu(i).frgEst',ceMu(i).Mtx(:,2)');
   
   % Calculation of power
   pwVo(i).pw1= (1/length(ceVo(i).Mtx(:,1)))*sum(abs(ceVo(i).Mtx(:,1)).^2);
@@ -109,7 +111,7 @@ title('Music-SDR evaluation')
 
 
 figure (2)
-fig1=boxplot(SDRmtxfrg',powVec)
+fig2=boxplot(SDRmtxfrg',powVec);
 xlabel('Power ratios in dB');
 ylabel('SDR evaluation/Voice case')
 title('Voice-SDR evaluation')
