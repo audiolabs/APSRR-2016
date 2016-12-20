@@ -11,10 +11,10 @@
 - Other optional packages on `requirements.txt`
 
 ## The reproducibility of this paper is designed to be completed in three basic steps:
-** On the main folder, run**:
-	 1. download.bat
-	 2. getwav.bat
-	 3. run.bat
+** On the main folder, run**: <br />
+	 1. download.bat <br />
+	 2. getwav.bat <br />
+	 3. run.bat <br />
   
 ## Instructions
 
@@ -69,7 +69,7 @@ The output files containing the onset detection for each file and for each metho
 3. Saved the results to the /output folder
 
 #### The remaining step is to evaluate the results. 
-According to the paper the Superflux algorithm is estimated based on: 
+According to the paper the Superflux algorithm is estimated based on: <br />
 **Precision; Recall; F-measure**
 
 - In order to compute these measurements, the module **onsets** on **madmom** library is used. 
@@ -108,7 +108,7 @@ During the evaluation of the paper "Maximum Filter Vibrato Suppression for Onset
 * Many libraries had to be used to reproduce the results. This takes time to find the appropriate module/classes and their respective functionality. 
 
 #### Parts that needed fixing
-* While converting the .hdf5 file to different .wav files, on the `modalexport` file I commented out the part on the code wich gets the yaml representer, since I got as an output only one of the wav files and the following error:
+* While converting the .hdf5 file to different .wav files, on the `modalexport` file I commented out the part on the code wich gets the yaml representer, since I got as an output only one of the wav files and the following error: <br />
   ```
   File "~\Anaconda3\lib\site-packages\yaml\representer.py", line 229, in represent_undefined
     raise RepresenterError("cannot represent an object: %s" % data)
