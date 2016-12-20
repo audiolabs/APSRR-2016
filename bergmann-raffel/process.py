@@ -19,7 +19,7 @@ def process_mp3(filename):
     cqt = feature_extraction.audio_cqt(audio_data)
     cqt = librosa.logamplitude(cqt, ref_power=cqt.max())
     cqt = librosa.util.normalize(cqt, norm=2., axis=0)
-    #create the output folder if it doesn't exits
+    #create the output folder if it doesn't exist
     if not os.path.exists(os.path.join('data','mp3cqts')):
         os.makedirs(os.path.join('data','mp3cqts'))
     output_filename = os.path.join('data','mp3cqts',filename.replace('.mp3', '.h5'))    
@@ -39,7 +39,7 @@ def process_mid(filename):
     return cqt   
     
 def distance_matrix(mp3cqt, midcqt, title):
-    dist_matrix = scipy.spatial.distance.cdist(mp3cqt.T, midcqt.T)
+    dist_matrix = scipy.spatial.distance.cdist(mp3cqt.T, midcqt.T, 'cosine')
     if not os.path.exists(os.path.join('data','distance_matrices')):
         os.makedirs(os.path.join('data','distance_matrices'))
     output_filename = os.path.join('data','distance_matrices', "%s.h5" % title)
