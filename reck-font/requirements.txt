@@ -1,0 +1,34 @@
+#Software:
+# -FFmpeg
+# -Octave
+# -Vlc
+# -RekordBox
+# -Essentia
+
+#Octave Packages:
+# -control
+# -signal
+# -image
+
+#Python packages:
+cycler==0.10.0
+matplotlib==1.5.3
+numpy==1.10.1
+pandas==0.19.1
+pyparsing==2.1.10
+python-dateutil==2.6.0
+pytz==2016.7
+scipy==0.18.1
+seaborn==0.7.1
+six==1.10.0
+pyzmq==15.2.0
+tornado==4.2.1
+jsonschema==2.5.1
+jupyter==1.0.0
+Cython==0.25.1
+madmom==0.14.1
+click==6.6
+celery==4.0.0
+statsmodels==0.6.1
+pyaml==16.12.2
+
