@@ -44,7 +44,7 @@ cd code
   pw(i).pw_dB=pow2db(ceil(pw(i).pw1/pw(i).pw2));                           %power ratio
   
   if range(pw(i).pw_dB)==0                                                 %check if all the values in the vector are the same(for every song)
-    gleich=pw(1).pw_dB;                                                    %takes just one value
+    powVoMU =pw(1).pw_dB;                                                    %takes just one value
   end
   
 
@@ -99,7 +99,7 @@ SDRcel=[SDR ;SDRmu ;SDRvo];                                                  %co
 SDRcelfrg=[SDRfrg; SDRmufrg; SDRvofrg]; 
 SDRmtx=cell2mat(SDRcel);                                                   %converts the cell structure to matrix
 SDRmtxfrg=cell2mat(SDRcelfrg);  
-powVec= [voice gleich music];                                              % power vector
+powVec= [voice powVoMu music];                                              % power vector
 
 
 % ploting 
