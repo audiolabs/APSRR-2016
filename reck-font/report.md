@@ -1,6 +1,6 @@
 # Report on the Reproducibility of "Tempo Estimation for Music Loops and a Simple Confidence Measure"
 
-This is a reproduction of the paper "Tempo Estimation for Music Loops and a Simple Confidence Measure" from Frederic Font and Xavier Serra for the Audiolabs Audio Processing Seminar WS 2016/2017 by Julian Reck.
+This is a reproduction of the paper ["Tempo Estimation for Music Loops and a Simple Confidence Measure"](http://mtg.upf.edu/node/3479) from Frederic Font and Xavier Serra for the Audiolabs Audio Processing Seminar WS 2016/2017 by Julian Reck.
 
 ## Installation
 
@@ -27,7 +27,7 @@ Despite the python packages, the software listed in requirements.txt needs to be
 
     ./download.sh
     
-Downloads the codebase from the paper and the Freesound loop database (FSL4).
+Downloads the [codebase](https://github.com/ffont/ismir2016) from the paper and the Freesound loop database (FSL4).
 
 ### Preprocess Dataset
 
@@ -66,7 +66,7 @@ During the evaluation of the paper "Tempo Estimation for Music Loops and a Simpl
 
 * Due to the big dataset, computation time is high, especially for the Gkiokas12. Without parallelization it took about 18 hours. 
 
-* A Typo in the the script analysis_algorithms.py leads to errors in the evaluation.
+* A typo in the the script 'analysis_algorithms.py' leads to errors in the evaluation.
 
 * The evaluation scripts are nicely written with iPhyton notebooks, but for a simpler extraction of the result plots, I converted it to a python script, which saves the desired plots as pngs.
 
