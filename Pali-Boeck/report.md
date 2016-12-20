@@ -11,7 +11,7 @@
 - Other optional packages on `requirements.txt`
 
 ## The reproducibility of this paper is designed to be completed in three basic steps:
-** On the main folder, run**: <br />
+##### On the main folder, run**: <br />
 	 1. download.bat <br />
 	 2. getwav.bat <br />
 	 3. run.bat <br />
