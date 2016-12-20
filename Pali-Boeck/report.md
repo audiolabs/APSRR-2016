@@ -12,9 +12,9 @@
 
 ## The reproducibility of this paper is designed to be completed in three basic steps:
 ##### On the main folder, run: <br />
-	 1. download.bat <br />
-	 2. getwav.bat <br />
-	 3. run.bat <br />
+	 1. download.bat 
+	 2. getwav.bat 
+	 3. run.bat 
   
 ## Instructions
 
