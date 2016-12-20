@@ -90,10 +90,10 @@ c) Is the data set available online? 0.5
 
 Without this toolkit: 
 
- 4. Can be reproduced, requiring considerable effort.
+* 4. Can be reproduced, requiring considerable effort.
 
 With this toolkit: 
 
-5. Can be easily reproduced with at most 15 minutes of user effort, requiring some proprietary source packages.
+* 5. Can be easily reproduced with at most 15 minutes of user effort, requiring some proprietary source packages.
 
 
