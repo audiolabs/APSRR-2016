@@ -14,9 +14,6 @@ wavFilesPath = os.path.abspath(os.path.join(os.pardir, 'Pali-Boeck/dataset/wavFi
 annotationsPathPre = os.path.abspath(os.path.join(os.pardir, 'Pali-Boeck/onset_db'))
 annotationsPathPost = os.path.abspath(os.path.join(os.pardir, 'Pali-Boeck/output/annotations'))
 
-print annotationsPathPre
-print annotationsPathPost
-
 #Read the .wav files names into an output file
 file_list = [f for f in listdir(wavFilesPath) if isfile(join(wavFilesPath, f))]
 

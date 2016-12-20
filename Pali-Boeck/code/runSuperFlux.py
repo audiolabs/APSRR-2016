@@ -7,7 +7,6 @@ Created on Sun Dec 11 13:09:18 2016
 
 """This script executes SuperFlux.py and saves the onset files to a new folder"""
 
-import SuperFlux
 import os
 import os.path
 import shutil
@@ -28,13 +27,13 @@ wavFiles = open(readPath, 'r')
 inFlux = wavFiles.read().split()
 
 for i in inFlux:
-    call('python code/SuperFlux.py -s ' + os.path.join(filesPath, i))
+    call('python code/SuperFlux/SuperFlux.py -s ' + os.path.join(filesPath, i), shell = True)
 
 wavFiles.close()
 
 files = os.listdir(filesPath)
 for f in files:
-    if f.endswith(".jpg", 0, len(f)):
+    if f.endswith(".act", 0, len(f)):
          #print(f)
          os.remove(os.path.join(filesPath, f))          
     if f.endswith(".superflux.txt", 0, len(f)):

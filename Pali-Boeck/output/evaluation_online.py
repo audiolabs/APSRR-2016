@@ -11,8 +11,6 @@ from os.path import isfile, join
 
 onsetPath = os.path.abspath(os.path.join(os.pardir, 'Pali-Boeck/output/resultOnsetsOnline'))
 annotationsPath = os.path.abspath(os.path.join(os.pardir, 'Pali-Boeck/output/annotations'))
-print onsetPath
-print annotationsPath
 
 onsetListNames = [f for f in listdir(onsetPath) if isfile(join(onsetPath, f))]
 annotationsListNames = [f for f in listdir(annotationsPath) if isfile(join(annotationsPath, f))]
@@ -21,6 +19,8 @@ print onsetListNames
 print annotationsListNames
 
 outFile = open(os.path.abspath(os.path.join(os.pardir, 'Pali-Boeck/output'))+'/'+'outputEvalOnline.txt', 'w+')                        
+
+onsetEval = []
 
 for itemOnset, itemAnnotations in zip(onsetListNames, annotationsListNames):
     outFile.write(itemOnset+ ' ' + itemAnnotations+'\n')
@@ -45,7 +45,12 @@ for itemOnset, itemAnnotations in zip(onsetListNames, annotationsListNames):
     annotationsArr = np.asarray(annotationsFloat)
     
     #Evaluation with a window = 0.025 and no delay
-    print >> outFile, madmom.evaluation.onsets.OnsetEvaluation((onsetsArr), (annotationsArr), 0.025, 0, 0)
+    print >> outFile, madmom.evaluation.onsets.OnsetEvaluation((onsetsArr), (annotationsArr), 0.025, 0.03, 0)
+    
+    onsetEval.append(madmom.evaluation.onsets.OnsetEvaluation((onsetsArr), (annotationsArr), 0.025, 0.03, 0))
+    
+    print madmom.evaluation.onsets.OnsetSumEvaluation(onsetEval)
+    print madmom.evaluation.onsets.OnsetMeanEvaluation(onsetEval)
     
     fonsets.close()
     fannotations.close()
