@@ -1,4 +1,4 @@
-# Report on the reproducibility of "Tempo Estimation for Music Loops and a Simple Confidence Measure"
+# Report on the Reproducibility of "Tempo Estimation for Music Loops and a Simple Confidence Measure"
 
 This is a reproduction of the paper "Tempo Estimation for Music Loops and a Simple Confidence Measure" from Frederic Font and Xavier Serra for the Audiolabs Audio Processing Seminar WS 2016/2017 by Julian Reck.
 
@@ -27,19 +27,19 @@ Despite the python packages, the software listed in requirements.txt needs to be
 
     ./download.sh
     
-Downloads the code from the paper and the Freesound loop database (FSL4).
+Downloads the codebase from the paper and the Freesound loop database (FSL4).
 
 ### Preprocess Dataset
 
     ./data_preprocessing.sh
     
-Preprocesses the data, creates folder structure and fixes some errors in the code from the authors.
+Preprocesses the dataset, creates folder structure and fixes some errors in the code from the authors.
 
 ### Analyse Dataset   
 
     ./run_analysis.sh
     
-Analyses the FSL4 dataset with all the tempo estimation algorithms used in the paper except the RekordBox algorithm. To get the results from the RekordBox software use the instrruction from the authors, which can be found here: https://github.com/ffont/ismir2016/blob/master/docs/analyze_dataset.md#rekbox
+Analyses the FSL4 dataset with all the tempo estimation algorithms used in the paper except the RekordBox algorithm. To get the results from the RekordBox software, use the instructions from the authors of the paper, which can be found [here](https://github.com/ffont/ismir2016/blob/master/docs/analyze_dataset.md#rekbox).
 
 ### Evaluation
 
