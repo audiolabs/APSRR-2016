@@ -14,14 +14,14 @@ This is a reproduction of the paper "Tempo Estimation for Music Loops and a Simp
 
 ### Installation
 
-To download this repository and install the required python packages run:
+To download this toolkit and install the required python packages run:
 
     git clone https://github.com/faroit/APSRR-2016.git
     cd APSRR-2016/
     cd reck-font/
     pip install -r requirements.txt
     
-Despite the python packages, the software listed in requirements needs to be installed manually.
+Despite the python packages, the software listed in requirements.txt needs to be installed manually.
 
 ### Download Dataset
 
@@ -88,8 +88,12 @@ c) Is the data set available online? 0.5
 
 ## Degree of Reproducibility
 
-Before: 4. Can be reproduced, requiring considerable effort.
+Without this toolkit: 
 
-After: 5. Can be easily reproduced with at most 15 minutes of user effort, requiring some proprietary source packages.
+ 4. Can be reproduced, requiring considerable effort.
+
+With this toolkit: 
+
+5. Can be easily reproduced with at most 15 minutes of user effort, requiring some proprietary source packages.
 
 
