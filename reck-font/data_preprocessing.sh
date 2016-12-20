@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Alternatively a shell script that invokes several other Python scripts is
-# possible. You should aim for as few commands as possible.
-
 #create folder structure for database
 mkdir ismir2016/data/FSL4
 mkdir ismir2016/data/FSL4/audio
