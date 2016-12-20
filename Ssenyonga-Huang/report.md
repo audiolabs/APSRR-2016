@@ -10,19 +10,27 @@ Bash script was developed for OS X, so would be recommended.
 
 Would also recommend at least MATLAB_R2012b mainly because of audioread.
 
+Code was written using macOS Sierra installed with MATLAB_R2015b. The code was also run on a Windows 10 platform running MATLAB_R2016b to obtain the same results.
+
 ### Download Dataset and preprocess data
 
-Execute download.sh. Note that in case you do not have unrar, you can add the line installing unrar on your system. Refer to download.sh!
+Execute `download.sh`. Note that in case you do not have unrar, you can add the line installing unrar on your system. Refer to `download.sh`!
 
 ### Process results
 
-Run rpca_mask_script.m (assuming all included code and dataset are downloaded). 
+Run `rpca_mask_script.m` (assuming all included code and dataset are downloaded) which is included in the folder `code/`. 
+
+The standalone code is provided for a varying dataset, e.g. 10 songs randomly chosen of 1000 song clips, for this the variable N has to be changed before running the script. Check that all files/folders are correctly placed within the working folder.
+
+To use the whole dataset, run the script after changing N to 1000.
 
 Execution time: This takes a long time, so it might need some code optimisation or use of the parallel computing toolbox.
 
+Included is the `presentation_demo.m` script ( in `code/`) to generate audio files for a demo in a presentation.
+
 ### Evaluation
 
-The resulting figures (in output/figures) are meant to be the ones on the last two pages of the paper.
+The resulting figures (in `output/figures/`) are meant to be the ones on the last two pages of the paper.
 
 ## Evaluation
 
