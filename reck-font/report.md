@@ -21,19 +21,15 @@ To download this repository and install the required python packages run:
     cd reck-font/
     pip install -r requirements.txt
     
-Despite the python package, the software listed in requirements needs to be installed manually.
+Despite the python packages, the software listed in requirements needs to be installed manually.
 
 ### Download Dataset
 
     ./download.sh
-    
-Downloads the codebase from the paper and the Freesound loop Dataset (FSL4).
 
 ### Preprocess Dataset
 
     ./data_preprocessing.sh
-    
-Preprocesses the dataset, creates folder structures and fixes a few errors.
 
 ### Analyse Dataset   
 
