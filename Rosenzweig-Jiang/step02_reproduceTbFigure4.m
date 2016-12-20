@@ -15,7 +15,7 @@ clear all; close all; clc
 tic
 
 %% Set paths, load files, init variables
-addpath(genpath('./code/')); % add chroma toolbox
+addpath(genpath('./code/')); % add chroma toolbox and helper function
 
 chordsFolder = './dataset/chords/';
 audioFolder = './dataset/audio/';

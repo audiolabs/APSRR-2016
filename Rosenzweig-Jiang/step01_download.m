@@ -13,6 +13,8 @@
 
 clear all; close all; clc;
 
+addpath(genpath('./code/')); % add helper function
+
 %% Delete old files
 if exist('./dataset/audio/','dir')
     rmdir('./dataset/audio/','s');
