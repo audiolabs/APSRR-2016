@@ -15,14 +15,14 @@ Minimum: MATLAB 2011a
 ## Installation
 
 ### Download and prepare tools/dataset
-Execute download.m
+Execute step01_download.m
 
 This will download and extract the dataset and the Chroma Toolbox in given folder structure.
 
 If you use a MATLAB version before 2012b please convert all mp3 files to wav files (Samplingrate: 22050Hz) with a converter of your choice, e.g. ffmpeg!
 
 ### Process results
-Execute ReproduceTbFigure4.m
+Execute step02_reproduceTbFigure4.m
 
 This will reproduce the Tb-graph of figure 4 in paper.
 
