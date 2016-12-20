@@ -1,6 +1,59 @@
-# Reproduction of "Tempo Estimation for Music Loops and a Simple Confidence Measure"
+# Report on the reproducibility of "Tempo Estimation for Music Loops and a Simple Confidence Measure"
 
-This is a reproduction of the paper "Tempo Estimation for Music Loops and a Simple Confidence Measure" with only the FSL4 database used.
+This is a reproduction of the paper "Tempo Estimation for Music Loops and a Simple Confidence Measure" from Frederic Font and Xavier Serra for the Audiolabs Audio Processing Seminar WS 2016/2017 by Julian Reck.
+
+## Installation
+
+### System Setup and Requirements
+
+* OS:	Ubuntu 16.04.1 LTS
+
+* Python 2.7.12
+
+* Software and packages needed are listed in requirements.txt
+
+### Installation
+
+To download this repository and install the required python packages run:
+
+    git clone https://github.com/faroit/APSRR-2016.git
+    cd APSRR-2016/
+    cd reck-font/
+    pip install -r requirements.txt
+    
+Despite the python package, the software listed in requirements needs to be installed manually.
+
+### Download Dataset
+
+    ./download.sh
+    
+Downloads the codebase from the paper and the Freesound loop Dataset (FSL4).
+
+### Preprocess Dataset
+
+    ./data_preprocessing.sh
+    
+Preprocesses the dataset, creates folder structures and fixes a few errors.
+
+### Analyse Dataset   
+
+    ./run_analysis.sh
+
+### Evaluation
+
+    ./evaluation.sh
+
+The figures 2-4 from the paper, will be saved as 'Figure2.png', 'Figure3.png' and 'Figure4.png'.
+
+
+## Evaluation
+
+During the evaluation of the paper "Tempo Estimation for Music Loops and a Simple Confidence Measure" I came across the following issues:
+
+* If the database FSL4 is downloaded via the provided link from the authors, the metadata json file contains fixed path names from the authors, leading to errors 
+
+* Typo in the the script analysis_algorithms.py leads to errors in the evaluation
+
 
 ## Reproducibility
 
