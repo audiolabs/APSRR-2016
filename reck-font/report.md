@@ -60,7 +60,7 @@ During the evaluation of the paper "Tempo Estimation for Music Loops and a Simpl
 
 * If the database FSL4 is downloaded via the provided link from the authors, the metadata json file contains fixed path names from the authors, leading to errors, which i fixed with a script
 
-* All python algorithms except Gkiokas12 were easily runable. Gkiokas12, which was written with octave, took a bit longer to install.
+* All python algorithms except Gkiokas12 were easily runnable. Gkiokas12, which was written with octave, took a bit longer to install.
 
 * The RekordBox metadata can not be extracted automatically with a script
 
