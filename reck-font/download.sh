@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# You should use curl(1) or wget(1) to download the data automatically
+# download the codebase and the database
 git clone https://github.com/ffont/ismir2016
 wget http://labs.freesound.org/static_data/FSL4/FSL4.zip
-# Extract the data using unzip(1) or unrar(1)
+# Extract the database
 unzip FSL4
