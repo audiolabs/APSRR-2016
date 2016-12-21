@@ -11,7 +11,7 @@
 
 The required environment is described in the requirements.txt
 
-To setup the environment install the given Software and run:
+To setup the environment, install the given Software and run:
 
 	pip install numpy
     pip install -r requirements.txt
@@ -39,15 +39,32 @@ To create the plots run:
 	
 	python plot.py
   
-The plots are now placed in the output folder. For every Song there are 3 plots: One shows the CQT of the audio from the mp3 file, one shows the CQT from the MIDI file and one shows the distance matrix for the two CQTs.
+The plots are now placed in the output folder. For every Song there are 3 plots: One shows the Constant-Q-Transform of the audio from the mp3 file, one shows the CQT from the MIDI file and one shows the distance matrix for the two CQTs.
+
 
 ## Evaluation
 
-The Evaluation of the reproducability is based on "Reproducible Research in Signal Processing" by P. Vandewalle. Since only figures 2(a), 2(b) and 2(e) are reproduced in this work, only the parts pertaining to those figures are evaluated. Some of the results, e.g. concerning the dataset, can be applied to the paper as a whole.
+The Evaluation of the reproducability is based on "Reproducible Research in Signal Processing" by P. Vandewalle. Since only figures 2(a), 2(b) and 2(e) are reproduced in this work, only the required steps to create those figure were analyzed:
+- Acquisition of the dataset
+- Computation of Constant-Q-Transforms and distance matrizes
+- Plotting the CQTs and distance-matrizes
+Further steps like the hashing of the CQTs and training of the convolutional networks were not looked at.
+
+
+### Dataset
+
+The acquisition of the dataset is the main problem in reproducing the results of the paper. For the evaluation a set of MIDI files is required, as well as audio files corresponding to the Million Song Database.
+The MIDI files are made available by the author online.
+The mp3 files have to be aquired from 7digital, an onlineshop for music. The [7digital API](http://docs.7digital.com/) allows the download of 30-60 second preview clips of their songs.
+
+The main problems:
+- The [code](https://github.com/tbertinmahieux/MSongsDB/blob/master/Tasks_Demos/Preview7digital/get_preview_url.py#L181) provided on the Million Song Database website to download preview clips from the 7digital API is outdated, as the API call does not utilize OAuth, which was added by 7digital and the API has to be accessed in another way.
+- The 7digital API only allows 4000 requests per day for free users which means for a million songs with 2 requests per song, downloading the dataset takes 500 days. 
+
 
 ### Code
 
-The entire code for reproducing the end results of the paper is available online in a github repository. Sadly the code for generating the figures is not part of the repository. As a result some modifications and additions to the code were neccessary to aquire the plots.
+The entire code for reproducing the end results of the paper is available online in a [github repository](https://github.com/craffel/midi-dataset). Sadly the code for generating the figures is not part of the repository. As a result some modifications and additions to the code were neccessary to aquire the plots.
 
 The main problems:
 - It is hard to extract the required data from the code since many code parts are not designed very flexible. For Example taken from [the authors repository](https://github.com/craffel/midi-dataset/blob/master/feature_extraction.py#L87) at line 87:
@@ -68,21 +85,10 @@ The main problems:
 
 - In some scripts function calls are made on all the datasets, without checking if the dataset is available. This makes applying the given code to a smaller subset unneccessarily complicated.
 
-Other issues for further analysis of the paper:
-- The code is sometimes very specific towards the authors test environment. For Example:
-	* Parallelization is done for a fixed number of processor cores. This complicates the reproduction of the results on a different setup.
-	* The python code executes bash commands and can therefore only be executed on Unix Systems
+While working on the paper, an other issue, which might affect further analysis of the paper became apparent. The code is sometimes very specific towards the authors test environment. For Example:
+* Parallelization is done for a fixed number of processor cores. This complicates the reproduction of the results on a different setup. See [here](https://github.com/craffel/midi-dataset/blob/master/scripts/create_msd_cqts.py#L55).
+* The python code executes bash commands and can therefore only be executed on Unix Systems. See [here](https://github.com/craffel/midi-dataset/blob/master/feature_extraction.py#L46).
 
-	
-### Dataset
-
-The acquisition of the dataset is the main problem in reproducing the results of the paper. For the evaluation a set of MIDI files is required, as well as audio files corresponding to the Million Song Database.
-The MIDI files are made available by the author online.
-The mp3 files have to be aquired from 7digital, an onlineshop for music. The [7digital API](http://docs.7digital.com/) allows the download of 30-60 second preview clips of their songs.
-
-The main problems:
-- The [code](https://github.com/tbertinmahieux/MSongsDB/blob/master/Tasks_Demos/Preview7digital/get_preview_url.py#L181) provided on the Million Song Database website to download preview clips from the 7digital API is outdated, as the API call does not utilize OAuth, which was added by 7digital and the API has to be accessed in another way.
-- The 7digital API only allows 4000 requests per day for free users which means for a million songs with 2 requests per song, downloading the dataset takes 500 days. 
 
 ### Results
 
@@ -91,6 +97,7 @@ Comparing Figure 2(a) and 2(b) from the Paper with the CQT plots for "Billy Idol
 When comparing the CQT distance matrix for the same song with Figure 2(e) similar effects can be observed. The general form of the CQT looks similar, the axis are again scaled differently.
 
 While the results appear very similar to the paper, the differences show that a full reconstruction was not achieved, due to the aforementioned problems with the implementation.
+
 
 ### Conlusion
 
