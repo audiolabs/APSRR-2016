@@ -1,0 +1,142 @@
+bass-elec-C-lo.superflux.txt .gitkeep
+Onsets:     0 TP:     0 FP:     4 FN:     0 Precision: 0.000 Recall: 1.000 F-measure: 0.000 mean:   nan ms std:   nan ms
+bass-elec2-E-lick.superflux.txt jg_bass-elec-C-lo.onsets
+Onsets:     1 TP:     1 FP:    43 FN:     0 Precision: 0.023 Recall: 1.000 F-measure: 0.044 mean:   6.3 ms std:   0.0 ms
+bell-octave0.superflux.txt jg_bass-elec2-E-lick.onsets
+Onsets:    16 TP:     0 FP:     1 FN:    16 Precision: 0.000 Recall: 0.000 F-measure: 0.000 mean:   nan ms std:   nan ms
+bell-octave1.superflux.txt jg_bell-octave0.onsets
+Onsets:     1 TP:     1 FP:     0 FN:     0 Precision: 1.000 Recall: 1.000 F-measure: 1.000 mean:   7.7 ms std:   0.0 ms
+bell-octave2.superflux.txt jg_bell-octave1.onsets
+Onsets:     1 TP:     1 FP:     0 FN:     0 Precision: 1.000 Recall: 1.000 F-measure: 1.000 mean:   8.8 ms std:   0.0 ms
+child-imitate-owl.superflux.txt jg_bell-octave2.onsets
+Onsets:     1 TP:     1 FP:    10 FN:     0 Precision: 0.091 Recall: 1.000 F-measure: 0.167 mean:   8.8 ms std:   0.0 ms
+child-imitate-shaker-hi-up.superflux.txt jg_child-imitate-owl.onsets
+Onsets:     2 TP:     1 FP:     0 FN:     1 Precision: 1.000 Recall: 0.500 F-measure: 0.667 mean:   4.6 ms std:   0.0 ms
+clarinet-C-octave0-vib.superflux.txt jg_child-imitate-shaker-hi-up.onsets
+Onsets:     1 TP:     1 FP:     5 FN:     0 Precision: 0.167 Recall: 1.000 F-measure: 0.286 mean:  -1.7 ms std:   0.0 ms
+clarinet-C-octave0.superflux.txt jg_clarinet-C-octave0-vib.onsets
+Onsets:     1 TP:     1 FP:     6 FN:     0 Precision: 0.143 Recall: 1.000 F-measure: 0.250 mean: -24.7 ms std:   0.0 ms
+conga-muffled-1.superflux.txt jg_clarinet-C-octave0.onsets
+Onsets:     1 TP:     1 FP:     0 FN:     0 Precision: 1.000 Recall: 1.000 F-measure: 1.000 mean: -15.7 ms std:   0.0 ms
+conga-open-1.superflux.txt jg_conga-muffled-1.onsets
+Onsets:     1 TP:     1 FP:     0 FN:     0 Precision: 1.000 Recall: 1.000 F-measure: 1.000 mean:   9.1 ms std:   0.0 ms
+cymbal-hihat-foot-open.superflux.txt jg_conga-open-1.onsets
+Onsets:     1 TP:     1 FP:     2 FN:     0 Precision: 0.333 Recall: 1.000 F-measure: 0.500 mean:   4.8 ms std:   0.0 ms
+cymbal-hihat-lick.superflux.txt jg_cymbal-hihat-foot-open.onsets
+Onsets:     1 TP:     1 FP:    19 FN:     0 Precision: 0.050 Recall: 1.000 F-measure: 0.095 mean:  -3.5 ms std:   0.0 ms
+cymbal-hihat-openclose-stick.superflux.txt jg_cymbal-hihat-lick.onsets
+Onsets:     8 TP:     1 FP:     3 FN:     7 Precision: 0.250 Recall: 0.125 F-measure: 0.167 mean:   8.3 ms std:   0.0 ms
+cymbal-splash-stick.superflux.txt jg_cymbal-hihat-openclose-stick.onsets
+Onsets:     2 TP:     1 FP:     0 FN:     1 Precision: 1.000 Recall: 0.500 F-measure: 0.667 mean:   9.4 ms std:   0.0 ms
+drum-bass-hi-1.superflux.txt jg_cymbal-splash-stick.onsets
+Onsets:     1 TP:     1 FP:     0 FN:     0 Precision: 1.000 Recall: 1.000 F-measure: 1.000 mean:   3.0 ms std:   0.0 ms
+drum-snare-drag.superflux.txt jg_drum-bass-hi-1.onsets
+Onsets:     1 TP:     1 FP:     4 FN:     0 Precision: 0.200 Recall: 1.000 F-measure: 0.333 mean:   7.5 ms std:   0.0 ms
+drum-snare-roll-short.superflux.txt jg_drum-snare-drag.onsets
+Onsets:     3 TP:     2 FP:    13 FN:     1 Precision: 0.133 Recall: 0.667 F-measure: 0.222 mean:   4.8 ms std:   4.1 ms
+drum-surdo-large-lick.superflux.txt jg_drum-snare-roll-short.onsets
+Onsets:     9 TP:     2 FP:    22 FN:     7 Precision: 0.083 Recall: 0.222 F-measure: 0.121 mean:  11.1 ms std:   3.6 ms
+female-glissdown.superflux.txt jg_drum-surdo-large-lick.onsets
+Onsets:     9 TP:     1 FP:     5 FN:     8 Precision: 0.167 Recall: 0.111 F-measure: 0.133 mean:   5.6 ms std:   0.0 ms
+femalevoices_aa2_A3.superflux.txt jg_female-glissdown.onsets
+Onsets:     1 TP:     0 FP:    21 FN:     1 Precision: 0.000 Recall: 0.000 F-measure: 0.000 mean:   nan ms std:   nan ms
+femalevoices_oo2_C#4.superflux.txt jg_femalevoices_aa2_A3.onsets
+Onsets:     1 TP:     1 FP:     8 FN:     0 Precision: 0.111 Recall: 1.000 F-measure: 0.200 mean: -19.0 ms std:   0.0 ms
+flugel-C.superflux.txt jg_femalevoices_oo2_C#4.onsets
+Onsets:     1 TP:     0 FP:     2 FN:     1 Precision: 0.000 Recall: 0.000 F-measure: 0.000 mean:   nan ms std:   nan ms
+flugel-lick.superflux.txt jg_flugel-C.onsets
+Onsets:     1 TP:     1 FP:    27 FN:     0 Precision: 0.036 Recall: 1.000 F-measure: 0.069 mean:   3.5 ms std:   0.0 ms
+flute-alto-C.superflux.txt jg_flugel-lick.onsets
+Onsets:     8 TP:     1 FP:     0 FN:     7 Precision: 1.000 Recall: 0.125 F-measure: 0.222 mean:   5.7 ms std:   0.0 ms
+flute-alto-lick.superflux.txt jg_flute-alto-C.onsets
+Onsets:     1 TP:     1 FP:    45 FN:     0 Precision: 0.022 Recall: 1.000 F-measure: 0.043 mean: -16.5 ms std:   0.0 ms
+glitch_groove_7.superflux.txt jg_flute-alto-lick.onsets
+Onsets:    15 TP:     7 FP:   100 FN:     8 Precision: 0.065 Recall: 0.467 F-measure: 0.115 mean:  -9.8 ms std:  14.6 ms
+guitar-ac-E-octave1.superflux.txt jg_glitch_groove_7.onsets
+Onsets:    38 TP:     1 FP:     0 FN:    37 Precision: 1.000 Recall: 0.026 F-measure: 0.051 mean:  -1.2 ms std:   0.0 ms
+guitar-classical-E-octave1-vib.superflux.txt jg_guitar-ac-E-octave1.onsets
+Onsets:     1 TP:     1 FP:     0 FN:     0 Precision: 1.000 Recall: 1.000 F-measure: 1.000 mean:   6.1 ms std:   0.0 ms
+guitar-classical-lick.superflux.txt jg_guitar-classical-E-octave1-vib.onsets
+Onsets:     1 TP:     1 FP:    33 FN:     0 Precision: 0.029 Recall: 1.000 F-measure: 0.057 mean:   7.7 ms std:   0.0 ms
+guitar-elec-hollow-lick.superflux.txt jg_guitar-classical-lick.onsets
+Onsets:    12 TP:     8 FP:    38 FN:     4 Precision: 0.174 Recall: 0.667 F-measure: 0.276 mean:  -1.3 ms std:  13.6 ms
+guitar-elec-solid-dist-E-octave1-long.superflux.txt jg_guitar-elec-hollow-lick.onsets
+Onsets:    15 TP:     1 FP:     9 FN:    14 Precision: 0.100 Recall: 0.067 F-measure: 0.080 mean:   8.4 ms std:   0.0 ms
+guitar-elec-solid-dist-EBfifths-octave1-long.superflux.txt jg_guitar-elec-solid-dist-E-octave1-long.onsets
+Onsets:     1 TP:     1 FP:     9 FN:     0 Precision: 0.100 Recall: 1.000 F-measure: 0.182 mean: -22.7 ms std:   0.0 ms
+guitar-elec-solid-dist-lick.superflux.txt jg_guitar-elec-solid-dist-EBfifths-octave1-long.onsets
+Onsets:     1 TP:     1 FP:    30 FN:     0 Precision: 0.032 Recall: 1.000 F-measure: 0.062 mean: -24.4 ms std:   0.0 ms
+guitar-elec-solid-lick.superflux.txt jg_guitar-elec-solid-dist-lick.onsets
+Onsets:     8 TP:     4 FP:    31 FN:     4 Precision: 0.114 Recall: 0.500 F-measure: 0.186 mean: -10.8 ms std:  10.4 ms
+guitar_chord1.superflux.txt jg_guitar-elec-solid-lick.onsets
+Onsets:    13 TP:     1 FP:     6 FN:    12 Precision: 0.143 Recall: 0.077 F-measure: 0.100 mean:  11.6 ms std:   0.0 ms
+guitar_chord2.superflux.txt jg_guitar_chord1.onsets
+Onsets:     2 TP:     2 FP:     9 FN:     0 Precision: 0.182 Recall: 1.000 F-measure: 0.308 mean: -20.3 ms std:   2.7 ms
+guitar_chord3.superflux.txt jg_guitar_chord2.onsets
+Onsets:     1 TP:     1 FP:    11 FN:     0 Precision: 0.083 Recall: 1.000 F-measure: 0.154 mean: -20.9 ms std:   0.0 ms
+guitar_riff_cutup1.superflux.txt jg_guitar_chord3.onsets
+Onsets:     2 TP:     0 FP:    50 FN:     2 Precision: 0.000 Recall: 0.000 F-measure: 0.000 mean:   nan ms std:   nan ms
+guitar_riff_cutup3.superflux.txt jg_guitar_riff_cutup1.onsets
+Onsets:    17 TP:     7 FP:    29 FN:    10 Precision: 0.194 Recall: 0.412 F-measure: 0.264 mean: -22.1 ms std:   1.9 ms
+malevoices_oo2_C#4.superflux.txt jg_guitar_riff_cutup3.onsets
+Onsets:    11 TP:     2 FP:    18 FN:     9 Precision: 0.100 Recall: 0.182 F-measure: 0.129 mean: -11.2 ms std:  12.5 ms
+malevoice_aa_A2.superflux.txt jg_malevoices_oo2_C#4.onsets
+Onsets:     1 TP:     0 FP:    18 FN:     1 Precision: 0.000 Recall: 0.000 F-measure: 0.000 mean:   nan ms std:   nan ms
+metal_beat_1.superflux.txt jg_malevoice_aa_A2.onsets
+Onsets:     1 TP:     0 FP:    27 FN:     1 Precision: 0.000 Recall: 0.000 F-measure: 0.000 mean:   nan ms std:   nan ms
+metal_beat_2.superflux.txt jg_metal_beat_1.onsets
+Onsets:    11 TP:     3 FP:    23 FN:     8 Precision: 0.115 Recall: 0.273 F-measure: 0.162 mean: -11.2 ms std:  13.0 ms
+mix1.superflux.txt jg_metal_beat_2.onsets
+Onsets:    12 TP:     2 FP:    28 FN:    10 Precision: 0.067 Recall: 0.167 F-measure: 0.095 mean:  12.1 ms std:   8.1 ms
+mix2.superflux.txt jg_mix1.onsets
+Onsets:     9 TP:     4 FP:    45 FN:     5 Precision: 0.082 Recall: 0.444 F-measure: 0.138 mean:   0.6 ms std:  13.0 ms
+mix3.superflux.txt jg_mix2.onsets
+Onsets:     7 TP:     2 FP:    21 FN:     5 Precision: 0.087 Recall: 0.286 F-measure: 0.133 mean:  14.0 ms std:   6.7 ms
+mix4.superflux.txt jg_mix3.onsets
+Onsets:     4 TP:     1 FP:   114 FN:     3 Precision: 0.009 Recall: 0.250 F-measure: 0.017 mean: -18.9 ms std:   0.0 ms
+piano-studio-octave1.superflux.txt jg_mix4.onsets
+Onsets:    28 TP:     1 FP:     0 FN:    27 Precision: 1.000 Recall: 0.036 F-measure: 0.069 mean:   8.0 ms std:   0.0 ms
+piano_B4.superflux.txt jg_piano-studio-octave1.onsets
+Onsets:     1 TP:     0 FP:     3 FN:     1 Precision: 0.000 Recall: 0.000 F-measure: 0.000 mean:   nan ms std:   nan ms
+piano_chord.superflux.txt jg_piano_B4.onsets
+Onsets:     1 TP:     1 FP:     7 FN:     0 Precision: 0.125 Recall: 1.000 F-measure: 0.222 mean: -21.8 ms std:   0.0 ms
+piano_G2.superflux.txt jg_piano_chord.onsets
+Onsets:     4 TP:     0 FP:     4 FN:     4 Precision: 0.000 Recall: 0.000 F-measure: 0.000 mean:   nan ms std:   nan ms
+prep_pianoE0_2.superflux.txt jg_piano_G2.onsets
+Onsets:     1 TP:     0 FP:     5 FN:     1 Precision: 0.000 Recall: 0.000 F-measure: 0.000 mean:   nan ms std:   nan ms
+prep_piano_C0_2.superflux.txt jg_prep_pianoE0_2.onsets
+Onsets:     1 TP:     1 FP:     3 FN:     0 Precision: 0.250 Recall: 1.000 F-measure: 0.400 mean: -20.0 ms std:   0.0 ms
+prep_piano_hit1.superflux.txt jg_prep_piano_C0_2.onsets
+Onsets:     1 TP:     1 FP:    12 FN:     0 Precision: 0.077 Recall: 1.000 F-measure: 0.143 mean:  16.9 ms std:   0.0 ms
+sax-bari-C-lo.superflux.txt jg_prep_piano_hit1.onsets
+Onsets:     1 TP:     0 FP:     8 FN:     1 Precision: 0.000 Recall: 0.000 F-measure: 0.000 mean:   nan ms std:   nan ms
+sax-bari-lick.superflux.txt jg_sax-bari-C-lo.onsets
+Onsets:     1 TP:     1 FP:    31 FN:     0 Precision: 0.031 Recall: 1.000 F-measure: 0.061 mean: -10.9 ms std:   0.0 ms
+sax-tenor-lick.superflux.txt jg_sax-bari-lick.onsets
+Onsets:    10 TP:     4 FP:    43 FN:     6 Precision: 0.085 Recall: 0.400 F-measure: 0.140 mean: -16.0 ms std:   4.9 ms
+shaker.superflux.txt jg_sax-tenor-lick.onsets
+Onsets:     9 TP:     1 FP:    15 FN:     8 Precision: 0.062 Recall: 0.111 F-measure: 0.080 mean: -21.2 ms std:   0.0 ms
+shenai-C.superflux.txt jg_shaker.onsets
+Onsets:     2 TP:     1 FP:     5 FN:     1 Precision: 0.167 Recall: 0.500 F-measure: 0.250 mean: -24.1 ms std:   0.0 ms
+singing-female1-C-hi.superflux.txt jg_shenai-C.onsets
+Onsets:     2 TP:     1 FP:     3 FN:     1 Precision: 0.250 Recall: 0.500 F-measure: 0.333 mean:   6.7 ms std:   0.0 ms
+singing-womanMA-C-oo.superflux.txt jg_singing-female1-C-hi.onsets
+Onsets:     1 TP:     1 FP:     2 FN:     0 Precision: 0.333 Recall: 1.000 F-measure: 0.500 mean:  -2.4 ms std:   0.0 ms
+tabla-lick-voiceanddrums.superflux.txt jg_singing-womanMA-C-oo.onsets
+Onsets:     1 TP:     1 FP:    17 FN:     0 Precision: 0.056 Recall: 1.000 F-measure: 0.105 mean: -16.5 ms std:   0.0 ms
+tabla-lick.superflux.txt jg_tabla-lick-voiceanddrums.onsets
+Onsets:     6 TP:     6 FP:    11 FN:     0 Precision: 0.353 Recall: 1.000 F-measure: 0.522 mean:  -2.6 ms std:   7.0 ms
+techno_sequence3.superflux.txt jg_tabla-lick.onsets
+Onsets:     6 TP:     2 FP:   269 FN:     4 Precision: 0.007 Recall: 0.333 F-measure: 0.014 mean:  -7.3 ms std:  17.3 ms
+thisIsTheSoundOfAVocoder_edited.superflux.txt jg_techno_sequence3.onsets
+Onsets:   109 TP:    12 FP:    54 FN:    97 Precision: 0.182 Recall: 0.110 F-measure: 0.137 mean:  -0.9 ms std:  13.2 ms
+timbale-lick.superflux.txt jg_thisIsTheSoundOfAVocoder_edited.onsets
+Onsets:    18 TP:     3 FP:    26 FN:    15 Precision: 0.103 Recall: 0.167 F-measure: 0.128 mean: -11.8 ms std:  14.0 ms
+trpt-C-lo.superflux.txt jg_timbale-lick.onsets
+Onsets:    13 TP:     1 FP:     1 FN:    12 Precision: 0.500 Recall: 0.077 F-measure: 0.133 mean:   7.4 ms std:   0.0 ms
+trpt-lick.superflux.txt jg_trpt-C-lo.onsets
+Onsets:     1 TP:     1 FP:    37 FN:     0 Precision: 0.026 Recall: 1.000 F-measure: 0.051 mean:  -7.6 ms std:   0.0 ms
+twangs_1.superflux.txt jg_trpt-lick.onsets
+Onsets:    13 TP:     5 FP:    21 FN:     8 Precision: 0.192 Recall: 0.385 F-measure: 0.256 mean:  -7.7 ms std:  15.4 ms
+vocoder1.superflux.txt jg_twangs_1.onsets
+Onsets:     9 TP:     2 FP:   104 FN:     7 Precision: 0.019 Recall: 0.222 F-measure: 0.035 mean:  13.8 ms std:   5.9 ms

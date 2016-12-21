@@ -1,0 +1,4 @@
+resultOnsets/
+resultOnsetsOnline/
+annotations/*
+!annotations/.gitkeep
