@@ -1,0 +1,19 @@
+# OS: Ubuntu 16.04.1
+# Python 2.7.12
+
+# Required software, install with apt-get
+#
+# fluidsynth
+# ffmpeg
+# python-tk
+
+# Required Python packages
+numpy
+scipy
+librosa==0.4.3
+pretty_midi
+deepdish
+msgpack-python
+msgpack-numpy
+requests
+requests-oauthlib
