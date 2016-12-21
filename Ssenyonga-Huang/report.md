@@ -42,6 +42,10 @@ During the evaluation of the paper *Singing-Voice Separation From Monaural Recor
 
 ## Reproducible research study
 
+The algorithms used were easily reproducible, as were the results needed for evaluation plotting.
+
+I struggled more with using git and terminal than I did with the code.
+
 ### Reproducibility of the algorithm
 - Is the algorithm described in sufficient detail? 1
 - Are exact parameter values given? 0.5
