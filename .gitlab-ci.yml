@@ -1,0 +1,11 @@
+image: audiolabs/latex
+
+test:
+  script: 
+    - apt-get update -yy
+    - apt-get install -yy pandoc
+    - make all
+  artifacts:
+    name: "$CI_PROJECT_NAME"
+    paths:
+      - *.pdf
