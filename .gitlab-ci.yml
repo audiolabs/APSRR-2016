@@ -8,4 +8,9 @@ test:
   artifacts:
     name: "$CI_PROJECT_NAME"
     paths:
-      - *.pdf
+      - bergmann-raffel.pdf
+      - Hysneli-Rafii.pdf
+      - Pali-Boeck.pdf
+      - Reck-Font.pdf
+      - Rosenzweig-Jiang.pdf
+      - Ssenyonga-Huang.pdf
