@@ -1,6 +1,7 @@
 # Maximum Filter Vibrato Suppression for Onset Detection
-- Reproducible Audio Research 
-- Audio Processing Seminar 2016-2017
+
+- Paper author: Sebastian Böck, Gerhard Widmer
+- Report author: Ornela Pali
 
 ## Requirements
 - OS: Windows 10 

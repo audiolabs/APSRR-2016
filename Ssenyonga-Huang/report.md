@@ -1,5 +1,8 @@
 # Singing-Voice Separation From Monaural Recordings Using Robust Principal Component Analysis 
 
+- Paper author: Po-Sen Huang, Scott Deeann Chen, Paris Smaragdis, Mark Hasegawa-Johnson
+- Report author: Robin Ssenyonga
+
 This is a report on the reproducibility of the above paper by Huang et al. by Robin Ssenyonga for the Audio Processing Seminar 2016/17. The aim of this project was to reproduce the evaluation results plots of the paper.
 
 ## Installation

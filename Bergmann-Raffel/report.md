@@ -1,7 +1,5 @@
 # "Large-Scale Content-Based Matching of MIDI and Audio Files"
 
-## About
-
 - Paper author: Colin Raffel
 - Report author: Michael Bergmann
 

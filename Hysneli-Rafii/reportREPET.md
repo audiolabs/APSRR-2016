@@ -1,10 +1,7 @@
 # Title "Repeating Pattern Extraction Technique (REPET): a simple method for voice/source separation"
 
-## About
-- Author of paper: Zafar Rafii, Bryan Pardo
-- Author of report: Arjola Hysneli
-- Audio Processing Seminar WS 2016/2017
-
+- Paper author: Zafar Rafii, Bryan Pardo
+- Report author: Arjola Hysneli
 
 ## Requirements
 Recommended: 
@@ -76,5 +73,3 @@ According to the evaluation steps considered in the paper, in the following part
 **Degree of reproducability:**
 
  **3** - The results can be reproduced by an independent researcher, requiring considerable effort.
-
-

@@ -1,5 +1,8 @@
 # Report on the Reproducibility of "Tempo Estimation for Music Loops and a Simple Confidence Measure"
 
+- Paper author: Font, F., & Serra, X.
+- Report author: Julian Reck
+
 This is a reproduction of the paper ["Tempo Estimation for Music Loops and a Simple Confidence Measure"](http://mtg.upf.edu/node/3479) from Frederic Font and Xavier Serra for the Audiolabs Audio Processing Seminar WS 2016/2017 by Julian Reck.
 
 ## Installation
@@ -114,5 +117,3 @@ Without this toolkit:
 With this toolkit: 
 
 * 5. Can be easily reproduced with at most 15 minutes of user effort, requiring some proprietary source packages.
-
-

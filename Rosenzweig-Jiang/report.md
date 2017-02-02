@@ -1,8 +1,10 @@
 # Report "Analyzing Chroma Feature Types for Automated Chord Recognition"
 
+- Paper author: Nanzhu Jiang et al.
+- Report author: Sebastian Rosenzweig
+
 ## About
-- Author of paper: Nanzhu Jiang et al.
-- Author of report: Sebastian Rosenzweig
+
 - Supervisor: Christof Weiß
 - Audio Processing Seminar WS 2016/2017
 - Reproduction of Tb-graph of figure 4 (page 8)
