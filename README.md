@@ -65,7 +65,7 @@ Students were asked to judge on the papers [reproducibility score](https://infos
 
 #### Analyzing Chroma Feature Types for Automated Chord Recognition
 
-* __Authors:__ Zafar Rafii, Bryan Pardo
+* __Authors:__ Nanzhu Jiang, Peter Grosche, Verena Konz, and Meinard Müller
 * __Reproduced by:__ Sebastian Rosenzweig, [@all4sound](https://github.com/all4sound)
 * [Original Paper + Code](https://github.com/faroit/reproducible-audio-research/blob/master/papers/jiang11.md)
 * [Reproducibilty Report](https://github.com/faroit/APSRR-2016/blob/master/Rosenzweig-Jiang/report.md)
