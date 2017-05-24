@@ -1,9 +1,7 @@
 # Reproducible Audio Research Seminar 2016
-Course at International Audio Laboratories Erlangen
+This repository presents the results of the 2016 reproducible research seminar held at [International Audio Laboratories Erlangen](www.audiolabs-erlangen.de).
 
-The objective of this course is to understand and verify published computational results in audio research. Students will be expected to present and discuss their results of reproducing a chosen paper.
-
-Students were asked to judge on the papers [reproducibility score](https://infoscience.epfl.ch/record/136640) between 1 and 6:
+The objective of this course is to understand and verify published computational results in audio research. Students presented and discussed their results of reproducing a chosen paper. Students were asked to judge on the papers [reproducibility score](https://infoscience.epfl.ch/record/136640) between 1 and 6:
 
 | Score     |      |
 | :------------- | :------------- |
@@ -14,6 +12,7 @@ Students were asked to judge on the papers [reproducibility score](https://infos
 | ⭐️⭐️⭐️⭐️⭐️ | Can be easily reproduced with at most 15 minutes of user effort, requiring some proprietary source packages.     |
 | 🌟       | Can be easily reproduced with at most 15 min of user effort, requiring only standard, freely available tools    |
 
+__Note__: The reproducibility reports were prepared by the students. The reported `Reproducibilty Score` below, therefore are based on the author's own report and do not necessarily reflect the view of the International Audio Laboratories Erlangen.
 
 ## Seminar Organisation:
 
